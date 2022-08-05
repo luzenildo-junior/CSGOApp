@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  CSGOTV
+
+  Created by Luzenildo Junior on 05/08/22.
+  
+*/
+
+// MARK: Home view
+"home.title" = "Partidas";
+ 
