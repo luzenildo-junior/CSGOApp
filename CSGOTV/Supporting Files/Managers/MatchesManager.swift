@@ -30,7 +30,7 @@ final class MatchesManager {
                                                  team1: team1,
                                                  team2: team2,
                                                  status: match.status,
-                                                 time: MatchDateParser(dateStr: match.beginAt).toString())
+                                                 Date: MatchDateParser(dateStr: match.beginAt).toString())
             })
         }
         return objects

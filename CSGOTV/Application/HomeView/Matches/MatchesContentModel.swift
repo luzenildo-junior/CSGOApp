@@ -14,5 +14,5 @@ struct MatchesDisplayableContent {
     let team1: CSGOTeam
     let team2: CSGOTeam
     let status: CSGOMatchGameStatus
-    let time: String
+    let Date: String
 }

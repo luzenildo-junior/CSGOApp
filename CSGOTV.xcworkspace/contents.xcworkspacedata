@@ -7,4 +7,10 @@
    <FileRef
       location = "group:/Users/luzenildojunior/Documents/CSGOTV/CSTVGONetworking/CSGOTVNetworking.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:CSGOTV.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -7,6 +7,7 @@
 
 import UIKit
 import CSGOTVNetworking
+import Kingfisher
 
 final class MatchTeamView: UIView {
     private lazy var teamImage = UIImageView()
@@ -15,7 +16,7 @@ final class MatchTeamView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
-        label.font = AppFonts.Label.robotoSmall
+        label.font = AppFonts.Label.robotoMedium
         label.numberOfLines = 2
         return label
     }()
@@ -39,9 +40,13 @@ final class MatchTeamView: UIView {
     func setupTeamView(with team: CSGOTeam) {
         teamName.text = team.name
         if let teamImageURL = team.imageUrl {
-            
+            teamImage.kf.setImage(
+                with: URL(string: teamImageURL),
+                placeholder: UIImage(named: "team-logo-placeholder")
+            )
         } else {
             teamImage.image = UIImage(named: "no-team-logo")
+            teamImage.tintColor = AppColors.lightGray
         }
     }
 }

@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 import CSGOTVNetworking
 
-typealias Spacing = UIView
-
 final class MatchOpponentsView: UIView {
     private lazy var team1View = MatchTeamView()
     private lazy var team2View = MatchTeamView()
@@ -20,22 +18,9 @@ final class MatchOpponentsView: UIView {
         label.textColor = UIColor(white: 1.0, alpha: 0.5)
         label.text = "vs"
         label.textAlignment = .center
-        label.font = AppFonts.Label.robotoSmall
+        label.font = AppFonts.Label.robotoMedium
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         return label
-    }()
-    
-    private lazy var viewsStack: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [
-            Spacing(),
-            team1View,
-            versusLabel,
-            team2View,
-            Spacing()
-        ])
-        stackView.alignment = .center
-        stackView.distribution = .fillEqually
-        return stackView
     }()
     
     override init(frame: CGRect) {
@@ -55,20 +40,25 @@ final class MatchOpponentsView: UIView {
 
 extension MatchOpponentsView: CodeView {
     func addViewHierarchy() {
-        addSubview(viewsStack)
+        [versusLabel, team1View, team2View].forEach { addSubview($0) }
     }
     
     func setupConstraints() {
-        viewsStack.translatesAutoresizingMaskIntoConstraints = false
         team1View.translatesAutoresizingMaskIntoConstraints = false
         team2View.translatesAutoresizingMaskIntoConstraints = false
         versusLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            // stack view
-            viewsStack.topAnchor.constraint(equalTo: self.topAnchor),
-            viewsStack.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            viewsStack.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            viewsStack.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            // team1
+            team1View.topAnchor.constraint(equalTo: self.topAnchor),
+            team1View.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            team1View.trailingAnchor.constraint(equalTo: versusLabel.leadingAnchor, constant: -20.0),
+            // team2
+            team2View.topAnchor.constraint(equalTo: team1View.topAnchor),
+            team2View.bottomAnchor.constraint(equalTo: team1View.bottomAnchor),
+            team2View.leadingAnchor.constraint(equalTo: versusLabel.trailingAnchor, constant: 20.0),
+            // versus label
+            versusLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            versusLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ])
     }
 }

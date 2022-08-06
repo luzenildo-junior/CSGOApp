@@ -9,6 +9,7 @@ import UIKit
 
 struct AppFonts {
     struct Label {
-        static let robotoSmall = UIFont(name: "Roboto-Regular", size: 12)
+        static let robotoSmall = UIFont(name: "Roboto-Medium", size: 10)
+        static let robotoMedium = UIFont(name: "Roboto-Regular", size: 12)
     }
 }
