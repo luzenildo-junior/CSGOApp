@@ -26,6 +26,7 @@ final class HomeViewController: BaseViewController {
         super.viewDidLoad()
         enableCodeView()
         subscribeToPublishers()
+        viewModel.fetchTournamentData()
     }
     
     private func subscribeToPublishers() {

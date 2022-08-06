@@ -6,7 +6,35 @@
 //
 
 import Foundation
+import CSGOTVNetworking
+import Combine
+
+enum HomeServiceError: Error {
+    case finishedCompletion
+}
 
 final class HomeService {
+    private var cancellables = Set<AnyCancellable>()
+    let service: CSGOTournamentSession
     
+    init(service: CSGOTournamentSession) {
+        self.service = service
+    }
+    
+    func fetchTournaments(with page: Int, completion: @escaping ( Result<[CSGOTournamentResponseModel], Error>) -> ()) {
+        service.getTournament(page: page)
+            .receive(on: DispatchQueue.main)
+            .sink { promiseCompletion in
+                switch promiseCompletion {
+                case .failure(let error):
+                    completion(.failure(error))
+                case .finished:
+                    break
+                }
+            } receiveValue: { tournament in
+                completion(.success(tournament))
+            }
+            .store(in: &cancellables)
+
+    }
 }
