@@ -26,6 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         coordinator?.start()
         
+        for family in UIFont.familyNames {
+            print("\(family)")
+
+            for name in UIFont.fontNames(forFamilyName: family) {
+                print("\(name)")
+            }
+        }
+        
         // Override point for customization after application launch.
         return true
     }

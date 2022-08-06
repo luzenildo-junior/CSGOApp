@@ -5,13 +5,23 @@
 //  Created by Luzenildo Junior on 04/08/22.
 //
 
-import Foundation
 import Combine
+import Foundation
+import UIKit
 
 final class HomeViewController: BaseViewController {
     private let viewModel: HomeViewModel
     
     private var cancellables = Set<AnyCancellable>()
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.register(type: MatchTableViewCell.self)
+        // AccessibilityIdentifier for UITesting
+        tableView.accessibilityIdentifier = "tableView"
+        return tableView
+    }()
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -39,6 +49,7 @@ final class HomeViewController: BaseViewController {
             case .showMatches:
                 self?.stopLoading()
                 print("Showing matches")
+                self?.tableView.reloadData()
             case .showError(let message):
                 print(message)
             }
@@ -48,15 +59,35 @@ final class HomeViewController: BaseViewController {
 
 extension HomeViewController: CodeView {
     func addViewHierarchy() {
-        
+        view.addSubview(tableView)
     }
     
     func setupConstraints() {
-        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            // tableView
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     func configureViews() {
         title = "home.title".localized
         navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.backgroundColor = .clear
+    }
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.getTableViewNumberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(for: MatchTableViewCell.self, indexPath: indexPath) else { return UITableViewCell() }
+        cell.setupMatchCell(with: viewModel.getCellDisplayableContent(for: indexPath))
+        return cell
     }
 }

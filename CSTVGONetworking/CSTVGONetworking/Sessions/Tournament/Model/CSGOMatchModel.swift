@@ -23,4 +23,19 @@ public enum CSGOMatchGameStatus: String, Decodable {
     case canceled
 }
 
-
+extension CSGOMatchGameStatus: Comparable {
+    private var comparisonValue: Int {
+        switch self {
+        case .running:
+            return 0
+        case .notStarted:
+            return 1
+        default:
+            return 2
+        }
+    }
+    
+    public static func < (lhs: Self, rhs: Self) -> Bool {
+        lhs.comparisonValue < rhs.comparisonValue
+    }
+}

@@ -10,7 +10,7 @@ import UIKit
 
 struct AppConstraints {
     struct Image {
-        static let small: CGFloat = 50.0
+        static let small: CGFloat = 70.0
         static let medium: CGFloat = 100.0
         static let big: CGFloat = 150.0
         static let landingLogoSize: CGFloat = 113.0

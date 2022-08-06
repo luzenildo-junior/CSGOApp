@@ -21,7 +21,7 @@ struct CSGOTournamentRequest: APIRequestConfiguration {
     var parameters: RequestParams {
         return .queryItems([
             "page": page,
-            "per_page": 10
+            "per_page": 2
         ])
     }
 }

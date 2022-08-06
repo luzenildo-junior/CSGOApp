@@ -34,6 +34,14 @@
 		D4347B0A289E06D600AE7487 /* MatchesContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B09289E06D600AE7487 /* MatchesContentModel.swift */; };
 		D4347B0C289EA44700AE7487 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B0B289EA44700AE7487 /* Calendar+Extension.swift */; };
 		D4347B0F289EBBED00AE7487 /* MatchDateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B0E289EBBED00AE7487 /* MatchDateParser.swift */; };
+		D4347B11289EC5EC00AE7487 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B10289EC5EC00AE7487 /* UITableView+Extension.swift */; };
+		D4347B13289EC97500AE7487 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B12289EC97500AE7487 /* MatchTableViewCell.swift */; };
+		D4347B15289ECD7200AE7487 /* NSLayoutConstraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B14289ECD7200AE7487 /* NSLayoutConstraint+Extension.swift */; };
+		D4347B17289ECE2D00AE7487 /* MatchTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B16289ECE2D00AE7487 /* MatchTeamView.swift */; };
+		D4347B1A289ED27F00AE7487 /* MatchOpponentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B19289ED27F00AE7487 /* MatchOpponentsView.swift */; };
+		D4347B1C289EEEB400AE7487 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B1B289EEEB400AE7487 /* AppFonts.swift */; };
+		D4347B23289EF1C900AE7487 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4347B21289EF1C900AE7487 /* Roboto-Medium.ttf */; };
+		D4347B24289EF1C900AE7487 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +107,14 @@
 		D4347B09289E06D600AE7487 /* MatchesContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesContentModel.swift; sourceTree = "<group>"; };
 		D4347B0B289EA44700AE7487 /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
 		D4347B0E289EBBED00AE7487 /* MatchDateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDateParser.swift; sourceTree = "<group>"; };
+		D4347B10289EC5EC00AE7487 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		D4347B12289EC97500AE7487 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		D4347B14289ECD7200AE7487 /* NSLayoutConstraint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extension.swift"; sourceTree = "<group>"; };
+		D4347B16289ECE2D00AE7487 /* MatchTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTeamView.swift; sourceTree = "<group>"; };
+		D4347B19289ED27F00AE7487 /* MatchOpponentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchOpponentsView.swift; sourceTree = "<group>"; };
+		D4347B1B289EEEB400AE7487 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		D4347B21289EF1C900AE7487 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,11 +237,12 @@
 		D4347A64289C522800AE7487 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D4347B18289ECE4500AE7487 /* Constants */,
 				D4347A33289C4B8400AE7487 /* LaunchScreen.storyboard */,
 				D4347A31289C4B8400AE7487 /* Assets.xcassets */,
-				D4347A69289C63F800AE7487 /* AppColors.swift */,
-				D4347A6D289C6D2000AE7487 /* AppConstraints.swift */,
 				D4347A78289D6ECB00AE7487 /* Localizable.strings */,
+				D4347B21289EF1C900AE7487 /* Roboto-Medium.ttf */,
+				D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -247,6 +264,8 @@
 			children = (
 				D4347A7B289D6FAF00AE7487 /* String+Localization.swift */,
 				D4347B0B289EA44700AE7487 /* Calendar+Extension.swift */,
+				D4347B10289EC5EC00AE7487 /* UITableView+Extension.swift */,
+				D4347B14289ECD7200AE7487 /* NSLayoutConstraint+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +292,9 @@
 			children = (
 				D4347B09289E06D600AE7487 /* MatchesContentModel.swift */,
 				D4347B0E289EBBED00AE7487 /* MatchDateParser.swift */,
+				D4347B12289EC97500AE7487 /* MatchTableViewCell.swift */,
+				D4347B16289ECE2D00AE7487 /* MatchTeamView.swift */,
+				D4347B19289ED27F00AE7487 /* MatchOpponentsView.swift */,
 			);
 			path = Matches;
 			sourceTree = "<group>";
@@ -282,6 +304,16 @@
 			children = (
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		D4347B18289ECE4500AE7487 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D4347A69289C63F800AE7487 /* AppColors.swift */,
+				D4347A6D289C6D2000AE7487 /* AppConstraints.swift */,
+				D4347B1B289EEEB400AE7487 /* AppFonts.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,7 +421,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4347B23289EF1C900AE7487 /* Roboto-Medium.ttf in Resources */,
 				D4347A35289C4B8400AE7487 /* LaunchScreen.storyboard in Resources */,
+				D4347B24289EF1C900AE7487 /* Roboto-Regular.ttf in Resources */,
 				D4347A79289D6ECB00AE7487 /* Localizable.strings in Resources */,
 				D4347A32289C4B8400AE7487 /* Assets.xcassets in Resources */,
 			);
@@ -417,12 +451,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4347A77289C7D8D00AE7487 /* HomeService.swift in Sources */,
+				D4347B1A289ED27F00AE7487 /* MatchOpponentsView.swift in Sources */,
 				D4347B0C289EA44700AE7487 /* Calendar+Extension.swift in Sources */,
 				D4347A6E289C6D2000AE7487 /* AppConstraints.swift in Sources */,
+				D4347B15289ECD7200AE7487 /* NSLayoutConstraint+Extension.swift in Sources */,
 				D4347A60289C4FF300AE7487 /* MainCoordinator.swift in Sources */,
 				D4347A29289C4B8200AE7487 /* AppDelegate.swift in Sources */,
+				D4347B17289ECE2D00AE7487 /* MatchTeamView.swift in Sources */,
 				D4347A68289C529000AE7487 /* LandingViewController.swift in Sources */,
 				D4347A63289C50B000AE7487 /* LandingFactory.swift in Sources */,
+				D4347B13289EC97500AE7487 /* MatchTableViewCell.swift in Sources */,
+				D4347B1C289EEEB400AE7487 /* AppFonts.swift in Sources */,
+				D4347B11289EC5EC00AE7487 /* UITableView+Extension.swift in Sources */,
 				D4347A5D289C4CAF00AE7487 /* CodeViewProtocol.swift in Sources */,
 				D4347A71289C7D5600AE7487 /* HomeFactory.swift in Sources */,
 				D4347B0A289E06D600AE7487 /* MatchesContentModel.swift in Sources */,

@@ -21,7 +21,7 @@ final class HomeService {
         self.service = service
     }
     
-    func fetchTournaments(with page: Int, completion: @escaping ( Result<[CSGOTournamentResponseModel], Error>) -> ()) {
+    func fetchTournaments(for page: Int, completion: @escaping ( Result<[CSGOTournamentResponseModel], Error>) -> ()) {
         service.getTournament(page: page)
             .receive(on: DispatchQueue.main)
             .sink { promiseCompletion in
