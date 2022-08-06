@@ -8,7 +8,7 @@
 import Foundation
 
 public struct CSGOMatch: Decodable {
-    public let beginAt: String
+    public let beginAt: String?
     public let id: Int64
     public let name: String
     public let status: CSGOMatchGameStatus

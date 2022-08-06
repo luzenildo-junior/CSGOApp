@@ -30,7 +30,8 @@ final class MatchTableViewCell: UITableViewCell {
     }
     
     func setupMatchCell(with content: MatchesDisplayableContent) {
-        matchDate.setupMatchDateView(matchDate: content.Date, isMatchRunning: content.status == .running)
+        matchDate.setupMatchDateView(matchDate: MatchDateParser(with: content.date).toString(),
+                                     isMatchRunning: content.status == .running)
         matchOpponents.setupOpponentsView(with: content.team1, team2: content.team2)
     }
 }

@@ -7,6 +7,16 @@
 
 import Foundation
 
+extension String {
+    func toDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZ"
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        return dateFormatter.date(from: self)
+    }
+}
+
 enum MatchDateParser {
     case today(hour: String)
     case thisWeek(day: String, hour: String)
@@ -15,26 +25,20 @@ enum MatchDateParser {
 }
 
 extension MatchDateParser {
-    init(dateStr: String) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZ"
-        dateFormatter.timeZone = TimeZone.current
-        dateFormatter.locale = Locale.current
-        if let date = dateFormatter.date(from: dateStr) {
-            let calendar = Calendar.current
-            let components = calendar.dateComponents([.month, .day, .hour, .minute], from: date)
-            if calendar.isDateInToday(date) {
-                self = .today(hour: components.formattedHour())
-                return
-            } else if calendar.isDateInThisWeek(date) {
-                self = .thisWeek(day: components.dayOfWeek(), hour: components.formattedHour())
-                return
-            } else {
-                self = .future(day: components.formattedDayMonth(), hour: components.formattedHour())
-                return
-            }
+    init(with date: Date?) {
+        guard let date = date else {
+            self = .unknown
+            return
         }
-        self = .unknown
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.month, .day, .hour, .minute], from: date)
+        if calendar.isDateInToday(date) {
+            self = .today(hour: components.formattedHour())
+        } else if calendar.isDateInThisWeek(date) {
+            self = .thisWeek(day: components.dayOfWeek(), hour: components.formattedHour())
+        } else {
+            self = .future(day: components.formattedDayMonth(), hour: components.formattedHour())
+        }
     }
     
     func toString() -> String {

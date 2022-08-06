@@ -35,9 +35,9 @@ final class HomeViewModel {
     
     private func handleTournamentsData(data: [CSGOTournamentResponseModel]) {
         let parsedData = self.matchesManager.parseData(tournaments: data)
-        self.matchesDisplayableElements.append(contentsOf: parsedData.sorted(by: {
-            $0.status < $1.status
-        }))
+        self.matchesDisplayableElements.append(contentsOf: parsedData
+            .sorted(by: { $0.date ?? Date() < $1.date ?? Date() })
+            .sorted(by: { $0.status < $1.status }))
     }
     
     func getTableViewNumberOfRows() -> Int {
