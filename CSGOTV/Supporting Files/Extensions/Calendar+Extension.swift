@@ -28,7 +28,7 @@ extension DateComponents {
     }
     
     func dayOfWeek() -> String {
-        weekdays[(self.weekday ?? 0) - 1]
+        weekdays[(self.weekday ?? 1) - 1]
     }
     
     func formattedHour() -> String {

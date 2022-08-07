@@ -28,6 +28,7 @@
 		D4347B00289DC05500AE7487 /* CSGOTournamentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AFF289DC05500AE7487 /* CSGOTournamentRequest.swift */; };
 		D4347B02289DC0BB00AE7487 /* CSGOTeamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B01289DC0BB00AE7487 /* CSGOTeamRequest.swift */; };
 		D4347B07289DF95500AE7487 /* CSGOSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B06289DF95500AE7487 /* CSGOSerie.swift */; };
+		D4347B2A289F3C0900AE7487 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B29289F3C0900AE7487 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D4347AFF289DC05500AE7487 /* CSGOTournamentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentRequest.swift; sourceTree = "<group>"; };
 		D4347B01289DC0BB00AE7487 /* CSGOTeamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamRequest.swift; sourceTree = "<group>"; };
 		D4347B06289DF95500AE7487 /* CSGOSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOSerie.swift; sourceTree = "<group>"; };
+		D4347B29289F3C0900AE7487 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				D4347AD9289D978D00AE7487 /* Protocols */,
 				D4347AD8289D978900AE7487 /* Enums */,
 				D4347AE4289D97E300AE7487 /* CSGOTVNetworkingAPI.swift */,
+				D4347B29289F3C0900AE7487 /* Date+Extension.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				D4347AF8289DBB3A00AE7487 /* CSGOLeague.swift in Sources */,
 				D4347AF6289DBB0100AE7487 /* CSGOPlayerModel.swift in Sources */,
 				D4347ADF289D97C000AE7487 /* ContentType.swift in Sources */,
+				D4347B2A289F3C0900AE7487 /* Date+Extension.swift in Sources */,
 				D4347AFE289DBD3C00AE7487 /* CSGOServiceAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

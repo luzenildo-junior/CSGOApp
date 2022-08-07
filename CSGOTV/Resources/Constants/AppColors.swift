@@ -12,4 +12,8 @@ struct AppColors {
     static let matchCellBackgroundColor = UIColor(red: 0.153, green: 0.149, blue: 0.224, alpha: 1)
     static let lightGray = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
     static let darkGray = UIColor(red: 0.979, green: 0.979, blue: 0.979, alpha: 0.2)
+    
+    static func white(alpha: CGFloat) -> UIColor {
+        UIColor(red: 1, green: 1, blue: 1, alpha: alpha)
+    }
 }

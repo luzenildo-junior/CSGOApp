@@ -11,6 +11,10 @@ import CSGOTVNetworking
 final class MatchesManager {
     var teamsDict = [String: CSGOTeam]()
     
+    init() {
+        teamsDict.updateValue(CSGOTeam(id: 1234567, name: "TBD"), forKey: "TBD")
+    }
+    
     func parseData(tournaments: [CSGOTournamentResponseModel]) -> [MatchesDisplayableContent] {
         var objects = [MatchesDisplayableContent]()
         let matches = tournaments.compactMap { $0.matches }

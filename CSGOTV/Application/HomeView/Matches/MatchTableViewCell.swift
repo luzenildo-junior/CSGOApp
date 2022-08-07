@@ -20,6 +20,14 @@ final class MatchTableViewCell: UITableViewCell {
     
     private lazy var matchOpponents = MatchOpponentsView()
     
+    private lazy var separator: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
+        return view
+    }()
+    
+    private lazy var matchLeagueName = MatchLeagueNameView()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         enableCodeView()
@@ -33,6 +41,7 @@ final class MatchTableViewCell: UITableViewCell {
         matchDate.setupMatchDateView(matchDate: MatchDateParser(with: content.date).toString(),
                                      isMatchRunning: content.status == .running)
         matchOpponents.setupOpponentsView(with: content.team1, team2: content.team2)
+        matchLeagueName.setupMatchLeagueNameView(with: content.matchName, leagueImageUrl: content.leagueImageUrl)
     }
 }
 
@@ -41,12 +50,16 @@ extension MatchTableViewCell: CodeView {
         contentView.addSubview(cellBackgroundView)
         cellBackgroundView.addSubview(matchDate)
         cellBackgroundView.addSubview(matchOpponents)
+        cellBackgroundView.addSubview(separator)
+        cellBackgroundView.addSubview(matchLeagueName)
     }
     
     func setupConstraints() {
         cellBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         matchDate.translatesAutoresizingMaskIntoConstraints = false
         matchOpponents.translatesAutoresizingMaskIntoConstraints = false
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        matchLeagueName.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             // cell background view
             cellBackgroundView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12.0),
@@ -63,7 +76,18 @@ extension MatchTableViewCell: CodeView {
             // match opponents
             matchOpponents.leadingAnchor.constraint(equalTo: cellBackgroundView.leadingAnchor),
             matchOpponents.trailingAnchor.constraint(equalTo: cellBackgroundView.trailingAnchor),
-            matchOpponents.bottomAnchor.constraint(equalTo: cellBackgroundView.bottomAnchor)
+            
+            // separator
+            separator.topAnchor.constraint(equalTo: matchOpponents.bottomAnchor, constant: 16.0),
+            separator.leadingAnchor.constraint(equalTo: cellBackgroundView.leadingAnchor),
+            separator.trailingAnchor.constraint(equalTo: cellBackgroundView.trailingAnchor),
+            separator.heightAnchor.constraint(equalToConstant: 1.0),
+            
+            // match league name
+            matchLeagueName.topAnchor.constraint(equalTo: separator.bottomAnchor),
+            matchLeagueName.leadingAnchor.constraint(equalTo: cellBackgroundView.leadingAnchor),
+            matchLeagueName.trailingAnchor.constraint(equalTo: cellBackgroundView.trailingAnchor),
+            matchLeagueName.bottomAnchor.constraint(equalTo: cellBackgroundView.bottomAnchor)
         ])
     }
     

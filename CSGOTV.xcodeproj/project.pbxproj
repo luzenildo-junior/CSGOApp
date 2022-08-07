@@ -46,6 +46,7 @@
 		D4347B23289EF1C900AE7487 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4347B21289EF1C900AE7487 /* Roboto-Medium.ttf */; };
 		D4347B24289EF1C900AE7487 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */; };
 		D4347B26289EFD2200AE7487 /* MatchDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B25289EFD2200AE7487 /* MatchDateView.swift */; };
+		D4347B28289F25E800AE7487 /* MatchLeagueNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		D4347B21289EF1C900AE7487 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		D4347B25289EFD2200AE7487 /* MatchDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDateView.swift; sourceTree = "<group>"; };
+		D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchLeagueNameView.swift; sourceTree = "<group>"; };
 		DCF161ED5CF8EC4CA96E1C4F /* Pods-CSGOTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,6 +318,7 @@
 				D4347B16289ECE2D00AE7487 /* MatchTeamView.swift */,
 				D4347B19289ED27F00AE7487 /* MatchOpponentsView.swift */,
 				D4347B25289EFD2200AE7487 /* MatchDateView.swift */,
+				D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */,
 			);
 			path = Matches;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				D4347A75289C7D7E00AE7487 /* HomeViewController.swift in Sources */,
 				D4347A66289C525A00AE7487 /* LandingViewModel.swift in Sources */,
 				D4347B05289DE49400AE7487 /* MatchesManager.swift in Sources */,
+				D4347B28289F25E800AE7487 /* MatchLeagueNameView.swift in Sources */,
 				D4347B0F289EBBED00AE7487 /* MatchDateParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,29 +13,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator: MainCoordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        
+        setupNavigationBarAppereance()
         let navigationController = UINavigationController()
-        
-        coordinator = MainCoordinator(navigationController: navigationController)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
+        coordinator = MainCoordinator(navigationController: navigationController)
         coordinator?.start()
-        
-        for family in UIFont.familyNames {
-            print("\(family)")
-
-            for name in UIFont.fontNames(forFamilyName: family) {
-                print("\(name)")
-            }
-        }
         
         // Override point for customization after application launch.
         return true
+    }
+    
+    private func setupNavigationBarAppereance() {
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        navigationBarAppearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.white
+        ]
+        navigationBarAppearance.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.white
+        ]
+        navigationBarAppearance.backgroundColor = AppColors.defaultBackgroundColor
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+                    
+        let tabBarApperance = UITabBarAppearance()
+        tabBarApperance.configureWithOpaqueBackground()
+        tabBarApperance.backgroundColor = AppColors.defaultBackgroundColor
+        UITabBar.appearance().scrollEdgeAppearance = tabBarApperance
+        UITabBar.appearance().standardAppearance = tabBarApperance
     }
 }
 
