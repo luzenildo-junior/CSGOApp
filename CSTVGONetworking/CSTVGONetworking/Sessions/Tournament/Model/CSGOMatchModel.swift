@@ -28,10 +28,8 @@ extension CSGOMatchGameStatus: Comparable {
         switch self {
         case .running:
             return 0
-        case .notStarted:
-            return 1
         default:
-            return 2
+            return 1
         }
     }
     

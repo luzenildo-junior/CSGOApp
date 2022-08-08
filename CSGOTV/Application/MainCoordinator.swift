@@ -9,6 +9,7 @@ import UIKit
 
 final class MainCoordinator: Coordinator {
     var navigationController: UINavigationController
+    var childCoordinators = [Coordinator]()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -26,7 +27,8 @@ final class MainCoordinator: Coordinator {
     }
     
     private func showHomeView() {
-        let homeViewController = HomeFactory.make()
-        navigationController.pushViewController(homeViewController, animated: false)
+        let matchesCoordinator = MatchesCoordinator(navigationController: navigationController)
+        matchesCoordinator.start()
+        childCoordinators.append(matchesCoordinator)
     }
 }

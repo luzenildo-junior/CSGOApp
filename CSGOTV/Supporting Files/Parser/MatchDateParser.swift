@@ -44,7 +44,7 @@ extension MatchDateParser {
     func toString() -> String {
         switch self {
         case .today(let hour):
-            return "hoje, " + hour
+            return "weekday.today".localized + ", " + hour
         case .thisWeek(let day, let hour):
             return "\(day), \(hour)"
         case .future(let day, let hour):

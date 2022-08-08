@@ -25,14 +25,12 @@
 		D4347A6A289C63F800AE7487 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A69289C63F800AE7487 /* AppColors.swift */; };
 		D4347A6C289C675700AE7487 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A6B289C675700AE7487 /* BaseViewController.swift */; };
 		D4347A6E289C6D2000AE7487 /* AppConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A6D289C6D2000AE7487 /* AppConstraints.swift */; };
-		D4347A71289C7D5600AE7487 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A70289C7D5600AE7487 /* HomeFactory.swift */; };
-		D4347A73289C7D7500AE7487 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A72289C7D7500AE7487 /* HomeViewModel.swift */; };
-		D4347A75289C7D7E00AE7487 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A74289C7D7E00AE7487 /* HomeViewController.swift */; };
-		D4347A77289C7D8D00AE7487 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A76289C7D8D00AE7487 /* HomeService.swift */; };
+		D4347A71289C7D5600AE7487 /* MatchesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A70289C7D5600AE7487 /* MatchesFactory.swift */; };
+		D4347A73289C7D7500AE7487 /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A72289C7D7500AE7487 /* MatchesViewModel.swift */; };
+		D4347A75289C7D7E00AE7487 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A74289C7D7E00AE7487 /* MatchesViewController.swift */; };
+		D4347A77289C7D8D00AE7487 /* MatchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A76289C7D8D00AE7487 /* MatchesService.swift */; };
 		D4347A79289D6ECB00AE7487 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4347A78289D6ECB00AE7487 /* Localizable.strings */; };
 		D4347A7C289D6FAF00AE7487 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A7B289D6FAF00AE7487 /* String+Localization.swift */; };
-		D4347AE7289D981500AE7487 /* CSTVGONetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4347AE6289D981500AE7487 /* CSTVGONetworking.framework */; };
-		D4347AE8289D981500AE7487 /* CSTVGONetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4347AE6289D981500AE7487 /* CSTVGONetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4347B05289DE49400AE7487 /* MatchesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B04289DE49400AE7487 /* MatchesManager.swift */; };
 		D4347B0A289E06D600AE7487 /* MatchesContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B09289E06D600AE7487 /* MatchesContentModel.swift */; };
 		D4347B0C289EA44700AE7487 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B0B289EA44700AE7487 /* Calendar+Extension.swift */; };
@@ -47,6 +45,9 @@
 		D4347B24289EF1C900AE7487 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */; };
 		D4347B26289EFD2200AE7487 /* MatchDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B25289EFD2200AE7487 /* MatchDateView.swift */; };
 		D4347B28289F25E800AE7487 /* MatchLeagueNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */; };
+		D4EDDD7428A1B589004A7501 /* CSGOTVNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */; };
+		D4EDDD7528A1B589004A7501 /* CSGOTVNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4EDDD7A28A1D314004A7501 /* MatchesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD7928A1D314004A7501 /* MatchesCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +68,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D4347AE9289D981500AE7487 /* Embed Frameworks */ = {
+		D4EDDD7628A1B589004A7501 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D4347AE8289D981500AE7487 /* CSTVGONetworking.framework in Embed Frameworks */,
+				D4EDDD7528A1B589004A7501 /* CSGOTVNetworking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,10 +109,10 @@
 		D4347A69289C63F800AE7487 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		D4347A6B289C675700AE7487 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D4347A6D289C6D2000AE7487 /* AppConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstraints.swift; sourceTree = "<group>"; };
-		D4347A70289C7D5600AE7487 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
-		D4347A72289C7D7500AE7487 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		D4347A74289C7D7E00AE7487 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D4347A76289C7D8D00AE7487 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		D4347A70289C7D5600AE7487 /* MatchesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesFactory.swift; sourceTree = "<group>"; };
+		D4347A72289C7D7500AE7487 /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
+		D4347A74289C7D7E00AE7487 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		D4347A76289C7D8D00AE7487 /* MatchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesService.swift; sourceTree = "<group>"; };
 		D4347A78289D6ECB00AE7487 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D4347A7B289D6FAF00AE7487 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		D4347AAF289D96C300AE7487 /* CSGOTVSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +131,9 @@
 		D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		D4347B25289EFD2200AE7487 /* MatchDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDateView.swift; sourceTree = "<group>"; };
 		D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchLeagueNameView.swift; sourceTree = "<group>"; };
+		D4EDDD7028A1B57D004A7501 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4EDDD7928A1D314004A7501 /* MatchesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCoordinator.swift; sourceTree = "<group>"; };
 		DCF161ED5CF8EC4CA96E1C4F /* Pods-CSGOTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4347AE7289D981500AE7487 /* CSTVGONetworking.framework in Frameworks */,
+				D4EDDD7428A1B589004A7501 /* CSGOTVNetworking.framework in Frameworks */,
 				6CC86D6D247BF6BAF6BA0253 /* Pods_CSGOTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,7 +241,7 @@
 		D4347A5E289C4FCD00AE7487 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				D4347A6F289C7D4000AE7487 /* HomeView */,
+				D4347A6F289C7D4000AE7487 /* MatchesView */,
 				D4347A61289C509700AE7487 /* LandingView */,
 				D4347A5F289C4FF300AE7487 /* MainCoordinator.swift */,
 			);
@@ -267,16 +271,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D4347A6F289C7D4000AE7487 /* HomeView */ = {
+		D4347A6F289C7D4000AE7487 /* MatchesView */ = {
 			isa = PBXGroup;
 			children = (
-				D4347B08289E06C800AE7487 /* Matches */,
-				D4347A70289C7D5600AE7487 /* HomeFactory.swift */,
-				D4347A72289C7D7500AE7487 /* HomeViewModel.swift */,
-				D4347A74289C7D7E00AE7487 /* HomeViewController.swift */,
-				D4347A76289C7D8D00AE7487 /* HomeService.swift */,
+				D4EDDD7828A1C95C004A7501 /* Model */,
+				D4EDDD7728A1C94F004A7501 /* View */,
+				D4347B08289E06C800AE7487 /* TableViewCell */,
+				D4347A70289C7D5600AE7487 /* MatchesFactory.swift */,
+				D4347A72289C7D7500AE7487 /* MatchesViewModel.swift */,
+				D4347A74289C7D7E00AE7487 /* MatchesViewController.swift */,
+				D4347A76289C7D8D00AE7487 /* MatchesService.swift */,
+				D4EDDD7928A1D314004A7501 /* MatchesCoordinator.swift */,
 			);
-			path = HomeView;
+			path = MatchesView;
 			sourceTree = "<group>";
 		};
 		D4347A7A289D6F9900AE7487 /* Extensions */ = {
@@ -293,6 +300,8 @@
 		D4347AAE289D96C300AE7487 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */,
+				D4EDDD7028A1B57D004A7501 /* CSGOTVNetworking.framework */,
 				D4347AE6289D981500AE7487 /* CSTVGONetworking.framework */,
 				D4347AAF289D96C300AE7487 /* CSGOTVSDK.framework */,
 				7611E0C5FB3C829877C5FAB9 /* Pods_CSGOTV.framework */,
@@ -310,17 +319,12 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		D4347B08289E06C800AE7487 /* Matches */ = {
+		D4347B08289E06C800AE7487 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				D4347B09289E06D600AE7487 /* MatchesContentModel.swift */,
 				D4347B12289EC97500AE7487 /* MatchTableViewCell.swift */,
-				D4347B16289ECE2D00AE7487 /* MatchTeamView.swift */,
-				D4347B19289ED27F00AE7487 /* MatchOpponentsView.swift */,
-				D4347B25289EFD2200AE7487 /* MatchDateView.swift */,
-				D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */,
 			);
-			path = Matches;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		D4347B0D289EBBBC00AE7487 /* Parser */ = {
@@ -339,6 +343,25 @@
 				D4347B1B289EEEB400AE7487 /* AppFonts.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		D4EDDD7728A1C94F004A7501 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4347B16289ECE2D00AE7487 /* MatchTeamView.swift */,
+				D4347B19289ED27F00AE7487 /* MatchOpponentsView.swift */,
+				D4347B25289EFD2200AE7487 /* MatchDateView.swift */,
+				D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4EDDD7828A1C95C004A7501 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4347B09289E06D600AE7487 /* MatchesContentModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E87D7EC5ECD802EFC5697E20 /* Pods */ = {
@@ -365,8 +388,8 @@
 				D4347A21289C4B8200AE7487 /* Sources */,
 				D4347A22289C4B8200AE7487 /* Frameworks */,
 				D4347A23289C4B8200AE7487 /* Resources */,
-				D4347AE9289D981500AE7487 /* Embed Frameworks */,
 				A658BF4B91EA8CF4F0510DE2 /* [CP] Embed Pods Frameworks */,
+				D4EDDD7628A1B589004A7501 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -596,7 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4347A77289C7D8D00AE7487 /* HomeService.swift in Sources */,
+				D4347A77289C7D8D00AE7487 /* MatchesService.swift in Sources */,
 				D4347B1A289ED27F00AE7487 /* MatchOpponentsView.swift in Sources */,
 				D4347B0C289EA44700AE7487 /* Calendar+Extension.swift in Sources */,
 				D4347A6E289C6D2000AE7487 /* AppConstraints.swift in Sources */,
@@ -611,14 +634,15 @@
 				D4347B1C289EEEB400AE7487 /* AppFonts.swift in Sources */,
 				D4347B11289EC5EC00AE7487 /* UITableView+Extension.swift in Sources */,
 				D4347A5D289C4CAF00AE7487 /* CodeViewProtocol.swift in Sources */,
-				D4347A71289C7D5600AE7487 /* HomeFactory.swift in Sources */,
+				D4347A71289C7D5600AE7487 /* MatchesFactory.swift in Sources */,
+				D4EDDD7A28A1D314004A7501 /* MatchesCoordinator.swift in Sources */,
 				D4347B0A289E06D600AE7487 /* MatchesContentModel.swift in Sources */,
-				D4347A73289C7D7500AE7487 /* HomeViewModel.swift in Sources */,
+				D4347A73289C7D7500AE7487 /* MatchesViewModel.swift in Sources */,
 				D4347A7C289D6FAF00AE7487 /* String+Localization.swift in Sources */,
 				D4347A6C289C675700AE7487 /* BaseViewController.swift in Sources */,
 				D4347A6A289C63F800AE7487 /* AppColors.swift in Sources */,
 				D4347A5B289C4BF300AE7487 /* CoordinatorProtocol.swift in Sources */,
-				D4347A75289C7D7E00AE7487 /* HomeViewController.swift in Sources */,
+				D4347A75289C7D7E00AE7487 /* MatchesViewController.swift in Sources */,
 				D4347A66289C525A00AE7487 /* LandingViewModel.swift in Sources */,
 				D4347B05289DE49400AE7487 /* MatchesManager.swift in Sources */,
 				D4347B28289F25E800AE7487 /* MatchLeagueNameView.swift in Sources */,

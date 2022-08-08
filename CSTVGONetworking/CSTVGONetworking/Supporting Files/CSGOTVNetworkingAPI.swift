@@ -25,26 +25,31 @@ extension APIErrors: LocalizedError {
 }
 
 final class CSGOTVNetworkingAPI {
+    private static var cancellables = Set<AnyCancellable>()
+    
     static func fetchData<T: Decodable>(for urlConvertible: URLRequestConvertible, type: T.Type) -> Future<T, Error> {
         return Future<T, Error> { promise in
             do {
-                let dataTask = URLSession.shared.dataTask(with: try urlConvertible.asURLRequest()) { data, response, error in
-                    guard let data = data else {
-                        if let error = error {
-                            promise(.failure(error))
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                URLSession.shared.dataTaskPublisher(for: try urlConvertible.asURLRequest())
+                    .tryMap { (data, response) -> Data in
+                        guard let httpResponse = response as? HTTPURLResponse,
+                              httpResponse.statusCode == 200 else {
+                            throw URLError(.badServerResponse)
                         }
-                        return
+                        return data
                     }
-                    do {
-                        let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let result = try decoder.decode(T.self, from: data)
-                        promise(.success(result))
-                    } catch {
-                        promise(.failure(error))
-                    }
-                }
-                dataTask.resume()
+                    .decode(type: T.self, decoder: decoder)
+                    .sink { completion in
+                        switch completion {
+                        case .failure(let error):
+                            promise(.failure(error))
+                        case .finished:
+                            break
+                        }
+                    } receiveValue: {  promise(.success($0)) }
+                    .store(in: &self.cancellables)
             } catch {
                 promise(.failure(error))
             }

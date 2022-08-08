@@ -9,9 +9,10 @@ import Foundation
 import Combine
 import CSGOTVNetworking
 
-final class HomeViewModel {
+final class MatchesViewModel {
     @Published var viewState: HomeState = .loading
-    private let service: HomeService
+    private let service: MatchesService
+    private weak var coordinatorDelegate: MatchesCoordinatorDelegate?
     private let matchesManager = MatchesManager()
     private var matchDisplayableElements = [MatchDisplayableContent]()
     
@@ -19,8 +20,9 @@ final class HomeViewModel {
     private var isLastPage = false
     private var isLoadingMoreData = false
     
-    init(service: HomeService = HomeService(service: CSGOServiceAPI())) {
+    init(service: MatchesService, coordinatorDelegate: MatchesCoordinatorDelegate) {
         self.service = service
+        self.coordinatorDelegate = coordinatorDelegate
     }
     
     func fetchTournamentData() {
@@ -44,6 +46,19 @@ final class HomeViewModel {
         }
     }
     
+    func getTableViewNumberOfRows() -> Int {
+        matchDisplayableElements.count
+    }
+    
+    func getCellDisplayableContent(for indexPath: IndexPath) -> MatchDisplayableContent {
+        matchDisplayableElements[indexPath.row]
+    }
+    
+    func openMatchDetails(for index: IndexPath) {
+        let match = matchDisplayableElements[index.row]
+        coordinatorDelegate?.openMatchDetails(match)
+    }
+    
     private func handleTournamentsData(data: [CSGOTournamentResponseModel]) {
         self.matchDisplayableElements.append(contentsOf: self.matchesManager.parseData(tournaments: data))
         self.matchDisplayableElements = matchDisplayableElements
@@ -52,17 +67,9 @@ final class HomeViewModel {
         self.viewState = .displayMatches
         self.isLoadingMoreData = false
     }
-    
-    func getTableViewNumberOfRows() -> Int {
-        matchDisplayableElements.count
-    }
-    
-    func getCellDisplayableContent(for indexPath: IndexPath) -> MatchDisplayableContent {
-        matchDisplayableElements[indexPath.row]
-    }
 }
 
-extension HomeViewModel {
+extension MatchesViewModel {
     enum HomeState {
         case loading
         case displayMatches

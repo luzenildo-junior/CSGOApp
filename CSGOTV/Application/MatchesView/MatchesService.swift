@@ -9,11 +9,7 @@ import Foundation
 import CSGOTVNetworking
 import Combine
 
-enum HomeServiceError: Error {
-    case finishedCompletion
-}
-
-final class HomeService {
+final class MatchesService {
     private var cancellables = Set<AnyCancellable>()
     let service: CSGOTournamentSession
     

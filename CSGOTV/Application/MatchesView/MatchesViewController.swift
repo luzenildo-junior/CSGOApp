@@ -9,8 +9,8 @@ import Combine
 import Foundation
 import UIKit
 
-final class HomeViewController: BaseViewController {
-    private let viewModel: HomeViewModel
+final class MatchesViewController: BaseViewController {
+    private let viewModel: MatchesViewModel
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -24,7 +24,7 @@ final class HomeViewController: BaseViewController {
         return tableView
     }()
     
-    init(viewModel: HomeViewModel) {
+    init(viewModel: MatchesViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -44,13 +44,13 @@ final class HomeViewController: BaseViewController {
         viewModel.$viewState
         .receive(on: DispatchQueue.main)
         .sink { [weak self] viewState in
+            guard let self = self else { return }
             switch viewState {
             case .loading:
-                self?.startLoading()
+                self.startLoading()
             case .displayMatches:
-                self?.stopLoading()
-                print("Showing matches")
-                self?.tableView.reloadData()
+                self.stopLoading()
+                self.tableView.reloadData()
             case .showError(let message):
                 print(message)
             }
@@ -58,7 +58,7 @@ final class HomeViewController: BaseViewController {
     }
 }
 
-extension HomeViewController: CodeView {
+extension MatchesViewController: CodeView {
     func addViewHierarchy() {
         view.addSubview(tableView)
     }
@@ -81,7 +81,7 @@ extension HomeViewController: CodeView {
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension MatchesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.getTableViewNumberOfRows()
     }
@@ -93,7 +93,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 }
 
-extension HomeViewController: UITableViewDelegate {
+extension MatchesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == viewModel.getTableViewNumberOfRows() - 1 {
             viewModel.loadMoreData()
@@ -101,6 +101,6 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        viewModel.openMatchDetails(for: indexPath)
     }
 }
