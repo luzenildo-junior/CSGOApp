@@ -37,7 +37,7 @@ final class MatchTableViewCell: UITableViewCell {
         fatalError("init(codser:) has not been implemented")
     }
     
-    func setupMatchCell(with content: MatchesDisplayableContent) {
+    func setupMatchCell(with content: MatchDisplayableContent) {
         matchDate.setupMatchDateView(matchDate: MatchDateParser(with: content.date).toString(),
                                      isMatchRunning: content.status == .running)
         matchOpponents.setupOpponentsView(with: content.team1, team2: content.team2)

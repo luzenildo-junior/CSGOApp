@@ -17,13 +17,14 @@ extension Calendar {
 extension DateComponents {
     private var weekdays: [String] {
         [
-            "Sun",
-            "Mon",
-            "Tue",
-            "Wed",
-            "Thu",
-            "Fri",
-            "Sat"
+            "weekday.sunday".localized,
+            "weekday.monday".localized,
+            "weekday.tuesday".localized,
+            "weekday.wednesday".localized,
+            "weekday.thursday".localized,
+            "weekday.friday".localized,
+            "weekday.saturday".localized
+            
         ]
     }
     

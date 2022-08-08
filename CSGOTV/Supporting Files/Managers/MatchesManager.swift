@@ -15,29 +15,42 @@ final class MatchesManager {
         teamsDict.updateValue(CSGOTeam(id: 1234567, name: "TBD"), forKey: "TBD")
     }
     
-    func parseData(tournaments: [CSGOTournamentResponseModel]) -> [MatchesDisplayableContent] {
-        var objects = [MatchesDisplayableContent]()
-        let matches = tournaments.compactMap { $0.matches }
-        tournaments.flatMap { $0.teams }.forEach { teamsDict.updateValue($0, forKey: $0.name) }
-        matches.enumerated().forEach { (index, matchs) in
-            objects.append(contentsOf: matchs.compactMap { match in
+    func parseData(tournaments: [CSGOTournamentResponseModel]) -> [MatchDisplayableContent] {
+        // get and populate teamsDict with all teams in the response model
+        handleTeams(from: tournaments)
+        
+        // get all matches separated by tournament
+        let matchesByTournament = tournaments.compactMap { $0.matches }
+        // enumerate matches by tournament to get tournament data and include on matches displayable content
+        return matchesByTournament.enumerated().flatMap { (index, matches) in
+            matches.compactMap { match in
                 let tournament = tournaments[index]
                 let matchTeams = getTeamNames(matchName: match.name)
-                guard let team1 = teamsDict[matchTeams[0]],
+                // if match is finished or canceled, dismiss data
+                guard match.status != .finished,
+                      match.status != .canceled,
+                      let team1 = teamsDict[matchTeams[0]],
                       let team2 = teamsDict[matchTeams[1]],
-                      match.status != .finished,
-                      match.status != .canceled else {
-                    return nil
+                      let matchDate = match.beginAt?.toDate()
+                       else { return nil }
+                var matchName = tournament.league.name
+                if let seriesName = tournament.serie.name {
+                    matchName += " - " + seriesName
                 }
-                return MatchesDisplayableContent(matchName: "\(tournaments[index].league.name) - \(tournaments[index].serie.name ?? "")",
-                                                 leagueImageUrl: tournament.league.imageUrl,
-                                                 team1: team1,
-                                                 team2: team2,
-                                                 status: match.status,
-                                                 date: match.beginAt?.toDate())
-            })
+                return MatchDisplayableContent(
+                    matchName: matchName,
+                    leagueImageUrl: tournament.league.imageUrl,
+                    team1: team1,
+                    team2: team2,
+                    status: match.status,
+                    date: matchDate
+                )
+            }
         }
-        return objects
+    }
+    
+    private func handleTeams(from tournaments: [CSGOTournamentResponseModel]) {
+        tournaments.flatMap { $0.teams }.forEach { teamsDict.updateValue($0, forKey: $0.name) }
     }
     
     private func getTeamNames(matchName: String) -> [String] {

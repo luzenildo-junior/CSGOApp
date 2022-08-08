@@ -17,6 +17,7 @@ final class HomeViewController: BaseViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(type: MatchTableViewCell.self)
         // AccessibilityIdentifier for UITesting
         tableView.accessibilityIdentifier = "tableView"
@@ -46,7 +47,7 @@ final class HomeViewController: BaseViewController {
             switch viewState {
             case .loading:
                 self?.startLoading()
-            case .showMatches:
+            case .displayMatches:
                 self?.stopLoading()
                 print("Showing matches")
                 self?.tableView.reloadData()
@@ -89,5 +90,17 @@ extension HomeViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(for: MatchTableViewCell.self, indexPath: indexPath) else { return UITableViewCell() }
         cell.setupMatchCell(with: viewModel.getCellDisplayableContent(for: indexPath))
         return cell
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.getTableViewNumberOfRows() - 1 {
+            viewModel.loadMoreData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

@@ -8,11 +8,11 @@
 import Foundation
 import CSGOTVNetworking
 
-struct MatchesDisplayableContent {
+struct MatchDisplayableContent {
     let matchName: String
     let leagueImageUrl: String?
     let team1: CSGOTeam
     let team2: CSGOTeam
     let status: CSGOMatchGameStatus
-    let date: Date?
+    let date: Date
 }

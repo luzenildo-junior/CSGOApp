@@ -31,7 +31,7 @@ extension MatchDateParser {
             return
         }
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.month, .day, .hour, .minute], from: date)
+        let components = calendar.dateComponents([.month, .day, .weekday, .hour, .minute], from: date)
         if calendar.isDateInToday(date) {
             self = .today(hour: components.formattedHour())
         } else if calendar.isDateInThisWeek(date) {

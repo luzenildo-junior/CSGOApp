@@ -9,3 +9,11 @@
 // MARK: Home view
 "home.title" = "Partidas";
  
+// MARK: Weekdays
+"weekday.monday" = "Seg";
+"weekday.tuesday" = "Ter";
+"weekday.wednesday" = "Qua";
+"weekday.thursday" = "Qui";
+"weekday.friday" = "Sex";
+"weekday.saturday" = "Sab";
+"weekday.sunday" = "Dom";
