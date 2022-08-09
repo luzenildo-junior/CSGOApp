@@ -28,6 +28,8 @@ final class MatchesCoordinator: Coordinator {
 
 extension MatchesCoordinator: MatchesCoordinatorDelegate {
     func openMatchDetails(_ match: MatchDisplayableContent) {
-        
+        let matchDetailsCoordinator = MatchDetailsCoordinator(navigationController: navigationController)
+        matchDetailsCoordinator.start(with: match)
+        childCoordinators.append(matchDetailsCoordinator)
     }
 }

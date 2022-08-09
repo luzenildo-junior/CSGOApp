@@ -21,9 +21,9 @@ extension CSGOServiceAPI: CSGOTournamentSession {
 }
 
 extension CSGOServiceAPI: CSGOTeamSession {
-    public func getTeam(with ids: [Int64]) -> Future<[CSGOTeam], Error> {
+    public func getTeam(with ids: [Int64]) -> Future<[[CSGOTeam]], Error> {
         return Future { promise in
-            ids.map { CSGOTVNetworkingAPI.fetchData(for: CSGOTeamRequest(id: $0), type: CSGOTeam.self).eraseToAnyPublisher() }
+            ids.map { CSGOTVNetworkingAPI.fetchData(for: CSGOTeamRequest(id: $0), type: [CSGOTeam].self).eraseToAnyPublisher() }
                 .publisher
                 .flatMap { $0 }
                 .collect()

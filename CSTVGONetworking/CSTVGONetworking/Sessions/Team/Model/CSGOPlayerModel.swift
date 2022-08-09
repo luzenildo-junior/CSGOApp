@@ -11,5 +11,5 @@ public struct CSGOPlayer: Decodable {
     public let firstName: String
     public let lastName: String
     public let imageUrl: String?
-    public let slug: String
+    public let name: String
 }

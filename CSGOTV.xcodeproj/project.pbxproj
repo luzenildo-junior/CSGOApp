@@ -48,6 +48,12 @@
 		D4EDDD7428A1B589004A7501 /* CSGOTVNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */; };
 		D4EDDD7528A1B589004A7501 /* CSGOTVNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4EDDD7A28A1D314004A7501 /* MatchesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD7928A1D314004A7501 /* MatchesCoordinator.swift */; };
+		D4EDDD7D28A1D984004A7501 /* MatchDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD7C28A1D984004A7501 /* MatchDetailsCoordinator.swift */; };
+		D4EDDD7F28A1D9C6004A7501 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD7E28A1D9C6004A7501 /* MatchDetailsViewController.swift */; };
+		D4EDDD8128A1D9D3004A7501 /* MatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD8028A1D9D3004A7501 /* MatchDetailsViewModel.swift */; };
+		D4EDDD8328A1D9DD004A7501 /* MatchDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD8228A1D9DD004A7501 /* MatchDetailsFactory.swift */; };
+		D4EDDD8628A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD8528A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift */; };
+		D4EDDD8828A1EA1D004A7501 /* MatchDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD8728A1EA1D004A7501 /* MatchDetailsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +140,12 @@
 		D4EDDD7028A1B57D004A7501 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EDDD7928A1D314004A7501 /* MatchesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCoordinator.swift; sourceTree = "<group>"; };
+		D4EDDD7C28A1D984004A7501 /* MatchDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsCoordinator.swift; sourceTree = "<group>"; };
+		D4EDDD7E28A1D9C6004A7501 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
+		D4EDDD8028A1D9D3004A7501 /* MatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModel.swift; sourceTree = "<group>"; };
+		D4EDDD8228A1D9DD004A7501 /* MatchDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsFactory.swift; sourceTree = "<group>"; };
+		D4EDDD8528A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewHeader.swift; sourceTree = "<group>"; };
+		D4EDDD8728A1EA1D004A7501 /* MatchDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsService.swift; sourceTree = "<group>"; };
 		DCF161ED5CF8EC4CA96E1C4F /* Pods-CSGOTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,21 +253,22 @@
 		D4347A5E289C4FCD00AE7487 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				D4347A6F289C7D4000AE7487 /* MatchesView */,
-				D4347A61289C509700AE7487 /* LandingView */,
+				D4EDDD7B28A1D95E004A7501 /* MatchDetails */,
+				D4347A6F289C7D4000AE7487 /* Matches */,
+				D4347A61289C509700AE7487 /* Landing */,
 				D4347A5F289C4FF300AE7487 /* MainCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		D4347A61289C509700AE7487 /* LandingView */ = {
+		D4347A61289C509700AE7487 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
 				D4347A62289C50B000AE7487 /* LandingFactory.swift */,
 				D4347A65289C525A00AE7487 /* LandingViewModel.swift */,
 				D4347A67289C529000AE7487 /* LandingViewController.swift */,
 			);
-			path = LandingView;
+			path = Landing;
 			sourceTree = "<group>";
 		};
 		D4347A64289C522800AE7487 /* Resources */ = {
@@ -271,7 +284,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D4347A6F289C7D4000AE7487 /* MatchesView */ = {
+		D4347A6F289C7D4000AE7487 /* Matches */ = {
 			isa = PBXGroup;
 			children = (
 				D4EDDD7828A1C95C004A7501 /* Model */,
@@ -283,7 +296,7 @@
 				D4347A76289C7D8D00AE7487 /* MatchesService.swift */,
 				D4EDDD7928A1D314004A7501 /* MatchesCoordinator.swift */,
 			);
-			path = MatchesView;
+			path = Matches;
 			sourceTree = "<group>";
 		};
 		D4347A7A289D6F9900AE7487 /* Extensions */ = {
@@ -362,6 +375,27 @@
 				D4347B09289E06D600AE7487 /* MatchesContentModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D4EDDD7B28A1D95E004A7501 /* MatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D4EDDD8428A1E3DD004A7501 /* TableViewCell */,
+				D4EDDD7C28A1D984004A7501 /* MatchDetailsCoordinator.swift */,
+				D4EDDD7E28A1D9C6004A7501 /* MatchDetailsViewController.swift */,
+				D4EDDD8028A1D9D3004A7501 /* MatchDetailsViewModel.swift */,
+				D4EDDD8228A1D9DD004A7501 /* MatchDetailsFactory.swift */,
+				D4EDDD8728A1EA1D004A7501 /* MatchDetailsService.swift */,
+			);
+			path = MatchDetails;
+			sourceTree = "<group>";
+		};
+		D4EDDD8428A1E3DD004A7501 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D4EDDD8528A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		E87D7EC5ECD802EFC5697E20 /* Pods */ = {
@@ -621,6 +655,7 @@
 			files = (
 				D4347A77289C7D8D00AE7487 /* MatchesService.swift in Sources */,
 				D4347B1A289ED27F00AE7487 /* MatchOpponentsView.swift in Sources */,
+				D4EDDD7F28A1D9C6004A7501 /* MatchDetailsViewController.swift in Sources */,
 				D4347B0C289EA44700AE7487 /* Calendar+Extension.swift in Sources */,
 				D4347A6E289C6D2000AE7487 /* AppConstraints.swift in Sources */,
 				D4347B15289ECD7200AE7487 /* NSLayoutConstraint+Extension.swift in Sources */,
@@ -629,6 +664,7 @@
 				D4347B17289ECE2D00AE7487 /* MatchTeamView.swift in Sources */,
 				D4347A68289C529000AE7487 /* LandingViewController.swift in Sources */,
 				D4347B26289EFD2200AE7487 /* MatchDateView.swift in Sources */,
+				D4EDDD8628A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift in Sources */,
 				D4347A63289C50B000AE7487 /* LandingFactory.swift in Sources */,
 				D4347B13289EC97500AE7487 /* MatchTableViewCell.swift in Sources */,
 				D4347B1C289EEEB400AE7487 /* AppFonts.swift in Sources */,
@@ -637,16 +673,20 @@
 				D4347A71289C7D5600AE7487 /* MatchesFactory.swift in Sources */,
 				D4EDDD7A28A1D314004A7501 /* MatchesCoordinator.swift in Sources */,
 				D4347B0A289E06D600AE7487 /* MatchesContentModel.swift in Sources */,
+				D4EDDD8828A1EA1D004A7501 /* MatchDetailsService.swift in Sources */,
 				D4347A73289C7D7500AE7487 /* MatchesViewModel.swift in Sources */,
 				D4347A7C289D6FAF00AE7487 /* String+Localization.swift in Sources */,
 				D4347A6C289C675700AE7487 /* BaseViewController.swift in Sources */,
+				D4EDDD7D28A1D984004A7501 /* MatchDetailsCoordinator.swift in Sources */,
 				D4347A6A289C63F800AE7487 /* AppColors.swift in Sources */,
 				D4347A5B289C4BF300AE7487 /* CoordinatorProtocol.swift in Sources */,
 				D4347A75289C7D7E00AE7487 /* MatchesViewController.swift in Sources */,
 				D4347A66289C525A00AE7487 /* LandingViewModel.swift in Sources */,
 				D4347B05289DE49400AE7487 /* MatchesManager.swift in Sources */,
+				D4EDDD8128A1D9D3004A7501 /* MatchDetailsViewModel.swift in Sources */,
 				D4347B28289F25E800AE7487 /* MatchLeagueNameView.swift in Sources */,
 				D4347B0F289EBBED00AE7487 /* MatchDateParser.swift in Sources */,
+				D4EDDD8328A1D9DD004A7501 /* MatchDetailsFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

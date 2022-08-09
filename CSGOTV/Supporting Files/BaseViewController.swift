@@ -25,14 +25,39 @@ class BaseViewController: UIViewController {
     func stopLoading() {
         loadingView.removeFromSuperview()
     }
+    
+    func setBackButton(){
+        let buttonForBack = UIButton(type: .custom)
+        let image = UIImage(named: "back-button")
+        
+        buttonForBack.setImage(image, for: .normal)
+        buttonForBack.imageView?.tintColor = UIColor.white
+        buttonForBack.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        buttonForBack.addTarget(
+            self,
+            action: #selector(BaseViewController.closeViewController),
+            for: .touchUpInside
+        )
+        
+        let barButtonItemForClose = UIBarButtonItem(customView: buttonForBack)
+        self.navigationItem.setLeftBarButton(barButtonItemForClose, animated: false)
+    }
+
+    @objc func closeViewController() {
+        self == self.navigationController?.children.first ? {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }() : {
+            self.navigationController?.popViewController(animated: true)
+        }()
+    }
 }
 
 private extension BaseViewController {
-    private func setupBackgroundColor() {
+    func setupBackgroundColor() {
         view.backgroundColor = AppColors.defaultBackgroundColor
     }
     
-    private func setupLoadingView() {
+    func setupLoadingView() {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = .white
         self.view.addSubview(loadingView)

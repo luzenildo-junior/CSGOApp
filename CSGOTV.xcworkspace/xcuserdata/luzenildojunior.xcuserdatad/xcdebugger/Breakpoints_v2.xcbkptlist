@@ -3,4 +3,54 @@
    uuid = "8372CD68-2ABF-4F12-8795-F0FF4DBBD384"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FDFDA20-D5DC-48AA-B0AF-884F8E4695FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CSGOTV/Application/Matches/View/MatchOpponentsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0FDFDA20-D5DC-48AA-B0AF-884F8E4695FE - 647404437e025ae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSGOTV.MatchOpponentsView.__allocating_init(frame: __C.CGRect) -&gt; CSGOTV.MatchOpponentsView"
+                  moduleName = "CSGOTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luzenildojunior/Documents/CSGOTV/CSGOTV/Application/Matches/View/MatchOpponentsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "0FDFDA20-D5DC-48AA-B0AF-884F8E4695FE - d4cf06a6c58ebf08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CSGOTV.MatchOpponentsView.init(frame: __C.CGRect) -&gt; CSGOTV.MatchOpponentsView"
+                  moduleName = "CSGOTV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luzenildojunior/Documents/CSGOTV/CSGOTV/Application/Matches/View/MatchOpponentsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
