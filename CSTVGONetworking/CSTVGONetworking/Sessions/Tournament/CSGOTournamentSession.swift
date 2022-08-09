@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 public protocol CSGOTournamentSession {
-    func getTournament(page: Int) -> Future<[CSGOTournamentResponseModel], Error>
+    func getTournament(page: Int) -> Future<[CSGOTournamentResponse], Error>
 }

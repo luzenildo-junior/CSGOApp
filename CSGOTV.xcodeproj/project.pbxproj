@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26E204C47F8388E825770B7B /* Pods_CSGOTV_CSGOTVUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F8411B6C7DF388632DED4D /* Pods_CSGOTV_CSGOTVUITests.framework */; };
-		6CC86D6D247BF6BAF6BA0253 /* Pods_CSGOTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7611E0C5FB3C829877C5FAB9 /* Pods_CSGOTV.framework */; };
-		A18F36EE88983A7AEA6436A9 /* Pods_CSGOTVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BDA5001C0A6CCE010AD52A /* Pods_CSGOTVTests.framework */; };
+		3DF011BC11A85CFDA412C7C1 /* Pods_CSGOTVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEEE7F451AEA535695C9878 /* Pods_CSGOTVTests.framework */; };
+		ACC48C8F93D90743F7316276 /* Pods_CSGOTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32FFA194A12463628DF7C7E /* Pods_CSGOTV.framework */; };
+		D3CA2D719CBFE776402BCBE2 /* Pods_CSGOTV_CSGOTVUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6D41A16D90BAB575FA7C44 /* Pods_CSGOTV_CSGOTVUITests.framework */; };
 		D4347A29289C4B8200AE7487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A28289C4B8200AE7487 /* AppDelegate.swift */; };
 		D4347A32289C4B8400AE7487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4347A31289C4B8400AE7487 /* Assets.xcassets */; };
 		D4347A35289C4B8400AE7487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4347A33289C4B8400AE7487 /* LaunchScreen.storyboard */; };
@@ -88,14 +88,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1747BBBDAD5500C8EB59098B /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV-CSGOTVUITests.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2BE8354E062AC6081DF46D46 /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV-CSGOTVUITests.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		32F8411B6C7DF388632DED4D /* Pods_CSGOTV_CSGOTVUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTV_CSGOTVUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		72BDA5001C0A6CCE010AD52A /* Pods_CSGOTVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7611E0C5FB3C829877C5FAB9 /* Pods_CSGOTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		934BF997D22D6D88BFBE60D5 /* Pods-CSGOTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTVTests.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTVTests/Pods-CSGOTVTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C965EF5A7D8E2FB1A8616122 /* Pods-CSGOTVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTVTests.release.xcconfig"; path = "Target Support Files/Pods-CSGOTVTests/Pods-CSGOTVTests.release.xcconfig"; sourceTree = "<group>"; };
-		D004F9F8270A0F1E80252B59 /* Pods-CSGOTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.debug.xcconfig"; sourceTree = "<group>"; };
+		0B1109BC185FE39C5F9BF8FB /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV-CSGOTVUITests.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4FEEE7F451AEA535695C9878 /* Pods_CSGOTVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B33622E49407AE03959E24 /* Pods-CSGOTVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTVTests.release.xcconfig"; path = "Target Support Files/Pods-CSGOTVTests/Pods-CSGOTVTests.release.xcconfig"; sourceTree = "<group>"; };
+		7291E750C028BF35B154988D /* Pods-CSGOTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTVTests.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTVTests/Pods-CSGOTVTests.debug.xcconfig"; sourceTree = "<group>"; };
+		974C4352A13EC79E7F01C635 /* Pods-CSGOTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.release.xcconfig"; sourceTree = "<group>"; };
+		CE6D41A16D90BAB575FA7C44 /* Pods_CSGOTV_CSGOTVUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTV_CSGOTVUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4347A25289C4B8200AE7487 /* CSGOTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGOTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4347A28289C4B8200AE7487 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4347A31289C4B8400AE7487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,7 +144,9 @@
 		D4EDDD8228A1D9DD004A7501 /* MatchDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsFactory.swift; sourceTree = "<group>"; };
 		D4EDDD8528A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewHeader.swift; sourceTree = "<group>"; };
 		D4EDDD8728A1EA1D004A7501 /* MatchDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsService.swift; sourceTree = "<group>"; };
-		DCF161ED5CF8EC4CA96E1C4F /* Pods-CSGOTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.release.xcconfig"; sourceTree = "<group>"; };
+		E8BD6A404B3E06F14C93B8AA /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV-CSGOTVUITests.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F32FFA194A12463628DF7C7E /* Pods_CSGOTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E044AD3894AB9D7FD5B489 /* Pods-CSGOTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EDDD7428A1B589004A7501 /* CSGOTVNetworking.framework in Frameworks */,
-				6CC86D6D247BF6BAF6BA0253 /* Pods_CSGOTV.framework in Frameworks */,
+				ACC48C8F93D90743F7316276 /* Pods_CSGOTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A18F36EE88983A7AEA6436A9 /* Pods_CSGOTVTests.framework in Frameworks */,
+				3DF011BC11A85CFDA412C7C1 /* Pods_CSGOTVTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E204C47F8388E825770B7B /* Pods_CSGOTV_CSGOTVUITests.framework in Frameworks */,
+				D3CA2D719CBFE776402BCBE2 /* Pods_CSGOTV_CSGOTVUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,9 +317,9 @@
 				D4EDDD7028A1B57D004A7501 /* CSGOTVNetworking.framework */,
 				D4347AE6289D981500AE7487 /* CSTVGONetworking.framework */,
 				D4347AAF289D96C300AE7487 /* CSGOTVSDK.framework */,
-				7611E0C5FB3C829877C5FAB9 /* Pods_CSGOTV.framework */,
-				32F8411B6C7DF388632DED4D /* Pods_CSGOTV_CSGOTVUITests.framework */,
-				72BDA5001C0A6CCE010AD52A /* Pods_CSGOTVTests.framework */,
+				F32FFA194A12463628DF7C7E /* Pods_CSGOTV.framework */,
+				CE6D41A16D90BAB575FA7C44 /* Pods_CSGOTV_CSGOTVUITests.framework */,
+				4FEEE7F451AEA535695C9878 /* Pods_CSGOTVTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -401,12 +401,12 @@
 		E87D7EC5ECD802EFC5697E20 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D004F9F8270A0F1E80252B59 /* Pods-CSGOTV.debug.xcconfig */,
-				DCF161ED5CF8EC4CA96E1C4F /* Pods-CSGOTV.release.xcconfig */,
-				2BE8354E062AC6081DF46D46 /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */,
-				1747BBBDAD5500C8EB59098B /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */,
-				934BF997D22D6D88BFBE60D5 /* Pods-CSGOTVTests.debug.xcconfig */,
-				C965EF5A7D8E2FB1A8616122 /* Pods-CSGOTVTests.release.xcconfig */,
+				F9E044AD3894AB9D7FD5B489 /* Pods-CSGOTV.debug.xcconfig */,
+				974C4352A13EC79E7F01C635 /* Pods-CSGOTV.release.xcconfig */,
+				E8BD6A404B3E06F14C93B8AA /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */,
+				0B1109BC185FE39C5F9BF8FB /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */,
+				7291E750C028BF35B154988D /* Pods-CSGOTVTests.debug.xcconfig */,
+				53B33622E49407AE03959E24 /* Pods-CSGOTVTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -418,12 +418,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4347A4F289C4B8400AE7487 /* Build configuration list for PBXNativeTarget "CSGOTV" */;
 			buildPhases = (
-				457072BC34B9337F5B63B6C3 /* [CP] Check Pods Manifest.lock */,
+				ABA7AEBFD2EFF0588C204635 /* [CP] Check Pods Manifest.lock */,
 				D4347A21289C4B8200AE7487 /* Sources */,
 				D4347A22289C4B8200AE7487 /* Frameworks */,
 				D4347A23289C4B8200AE7487 /* Resources */,
-				A658BF4B91EA8CF4F0510DE2 /* [CP] Embed Pods Frameworks */,
 				D4EDDD7628A1B589004A7501 /* Embed Frameworks */,
+				C05D71E95AFCDE021CBCCA8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,7 +438,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4347A52289C4B8400AE7487 /* Build configuration list for PBXNativeTarget "CSGOTVTests" */;
 			buildPhases = (
-				A4B2A801BABBD7AAC0B0697D /* [CP] Check Pods Manifest.lock */,
+				55C0D45BB4A1F1AA6EA5EEF2 /* [CP] Check Pods Manifest.lock */,
 				D4347A37289C4B8400AE7487 /* Sources */,
 				D4347A38289C4B8400AE7487 /* Frameworks */,
 				D4347A39289C4B8400AE7487 /* Resources */,
@@ -457,11 +457,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4347A55289C4B8400AE7487 /* Build configuration list for PBXNativeTarget "CSGOTVUITests" */;
 			buildPhases = (
-				0871BCBA6EC911448EA67ADF /* [CP] Check Pods Manifest.lock */,
+				5D4746893C11A3C4BBD6C6DF /* [CP] Check Pods Manifest.lock */,
 				D4347A41289C4B8400AE7487 /* Sources */,
 				D4347A42289C4B8400AE7487 /* Frameworks */,
 				D4347A43289C4B8400AE7487 /* Resources */,
-				FF35E65C16E53CFB71B29184 /* [CP] Embed Pods Frameworks */,
+				ED72B9CB299B9511AE08F579 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -546,51 +546,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0871BCBA6EC911448EA67ADF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CSGOTV-CSGOTVUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		457072BC34B9337F5B63B6C3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CSGOTV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A4B2A801BABBD7AAC0B0697D /* [CP] Check Pods Manifest.lock */ = {
+		55C0D45BB4A1F1AA6EA5EEF2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -612,7 +568,51 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A658BF4B91EA8CF4F0510DE2 /* [CP] Embed Pods Frameworks */ = {
+		5D4746893C11A3C4BBD6C6DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CSGOTV-CSGOTVUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABA7AEBFD2EFF0588C204635 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CSGOTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C05D71E95AFCDE021CBCCA8B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -629,7 +629,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSGOTV/Pods-CSGOTV-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF35E65C16E53CFB71B29184 /* [CP] Embed Pods Frameworks */ = {
+		ED72B9CB299B9511AE08F579 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -850,7 +850,7 @@
 		};
 		D4347A50289C4B8400AE7487 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D004F9F8270A0F1E80252B59 /* Pods-CSGOTV.debug.xcconfig */;
+			baseConfigurationReference = F9E044AD3894AB9D7FD5B489 /* Pods-CSGOTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -878,7 +878,7 @@
 		};
 		D4347A51289C4B8400AE7487 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCF161ED5CF8EC4CA96E1C4F /* Pods-CSGOTV.release.xcconfig */;
+			baseConfigurationReference = 974C4352A13EC79E7F01C635 /* Pods-CSGOTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -906,7 +906,7 @@
 		};
 		D4347A53289C4B8400AE7487 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 934BF997D22D6D88BFBE60D5 /* Pods-CSGOTVTests.debug.xcconfig */;
+			baseConfigurationReference = 7291E750C028BF35B154988D /* Pods-CSGOTVTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -926,7 +926,7 @@
 		};
 		D4347A54289C4B8400AE7487 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C965EF5A7D8E2FB1A8616122 /* Pods-CSGOTVTests.release.xcconfig */;
+			baseConfigurationReference = 53B33622E49407AE03959E24 /* Pods-CSGOTVTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -946,7 +946,7 @@
 		};
 		D4347A56289C4B8400AE7487 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BE8354E062AC6081DF46D46 /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */;
+			baseConfigurationReference = E8BD6A404B3E06F14C93B8AA /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -964,7 +964,7 @@
 		};
 		D4347A57289C4B8400AE7487 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1747BBBDAD5500C8EB59098B /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */;
+			baseConfigurationReference = 0B1109BC185FE39C5F9BF8FB /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -21,7 +21,7 @@ struct CSGOTournamentRequest: APIRequestConfiguration {
     var parameters: RequestParams {
         return .queryItems([
             "page": page,
-            "per_page": 6,
+            "per_page": 5,
             "sort": "begin_at",
             "range[begin_at]": "\(Date().twoDaysAgo.stringFormatted),\(Date().next3Months.stringFormatted)"
         ])

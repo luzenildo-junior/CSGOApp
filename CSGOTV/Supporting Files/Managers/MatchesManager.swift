@@ -11,11 +11,13 @@ import CSGOTVNetworking
 final class MatchesManager {
     var teamsDict = [String: CSGOTeam]()
     
+    private let excludedMatchStatus: [CSGOMatchGameStatus] = [.postponed, .finished, .canceled]
+    
     init() {
         teamsDict.updateValue(CSGOTeam(id: 1234567, name: "TBD"), forKey: "TBD")
     }
     
-    func parseData(tournaments: [CSGOTournamentResponseModel]) -> [MatchDisplayableContent] {
+    func parseData(tournaments: [CSGOTournamentResponse]) -> [MatchDisplayableContent] {
         // get and populate teamsDict with all teams in the response model
         handleTeams(from: tournaments)
         
@@ -27,8 +29,7 @@ final class MatchesManager {
                 let tournament = tournaments[index]
                 let matchTeams = getTeamNames(matchName: match.name)
                 // if match is finished or canceled, dismiss data
-                guard match.status != .finished,
-                      match.status != .canceled,
+                guard !excludedMatchStatus.contains(match.status),
                       let team1 = teamsDict[matchTeams[0]],
                       let team2 = teamsDict[matchTeams[1]],
                       let matchDate = match.beginAt?.toDate()
@@ -49,7 +50,7 @@ final class MatchesManager {
         }
     }
     
-    private func handleTeams(from tournaments: [CSGOTournamentResponseModel]) {
+    private func handleTeams(from tournaments: [CSGOTournamentResponse]) {
         tournaments.flatMap { $0.teams }.forEach { teamsDict.updateValue($0, forKey: $0.name) }
     }
     

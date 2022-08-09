@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D4347AC2289D972C00AE7487 /* CSTVGONetworking.docc in Sources */ = {isa = PBXBuildFile; fileRef = D4347AC1289D972C00AE7487 /* CSTVGONetworking.docc */; };
 		D4347AC8289D972C00AE7487 /* CSGOTVNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4347ABD289D972C00AE7487 /* CSGOTVNetworking.framework */; };
-		D4347ACD289D972C00AE7487 /* CSTVGONetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347ACC289D972C00AE7487 /* CSTVGONetworkingTests.swift */; };
 		D4347ACE289D972C00AE7487 /* CSTVGONetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D4347AC0289D972C00AE7487 /* CSTVGONetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4347ADB289D97B800AE7487 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347ADA289D97B800AE7487 /* APIConfiguration.swift */; };
 		D4347ADF289D97C000AE7487 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347ADC289D97C000AE7487 /* ContentType.swift */; };
@@ -19,7 +18,7 @@
 		D4347AE5289D97E300AE7487 /* CSGOTVNetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AE4289D97E300AE7487 /* CSGOTVNetworkingAPI.swift */; };
 		D4347AEC289D9BE600AE7487 /* CSGOTournamentSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AEB289D9BE600AE7487 /* CSGOTournamentSession.swift */; };
 		D4347AF0289D9C7A00AE7487 /* CSGOMatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AEF289D9C7A00AE7487 /* CSGOMatchModel.swift */; };
-		D4347AF2289DB7C700AE7487 /* CSGOTournamentResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF1289DB7C700AE7487 /* CSGOTournamentResponseModel.swift */; };
+		D4347AF2289DB7C700AE7487 /* CSGOTournamentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF1289DB7C700AE7487 /* CSGOTournamentResponse.swift */; };
 		D4347AF4289DBAE400AE7487 /* CSGOTeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF3289DBAE400AE7487 /* CSGOTeamModel.swift */; };
 		D4347AF6289DBB0100AE7487 /* CSGOPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF5289DBB0100AE7487 /* CSGOPlayerModel.swift */; };
 		D4347AF8289DBB3A00AE7487 /* CSGOLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF7289DBB3A00AE7487 /* CSGOLeague.swift */; };
@@ -29,6 +28,23 @@
 		D4347B02289DC0BB00AE7487 /* CSGOTeamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B01289DC0BB00AE7487 /* CSGOTeamRequest.swift */; };
 		D4347B07289DF95500AE7487 /* CSGOSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B06289DF95500AE7487 /* CSGOSerie.swift */; };
 		D4347B2A289F3C0900AE7487 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B29289F3C0900AE7487 /* Date+Extension.swift */; };
+		D4CBF40B28A203250043BB59 /* CSGOTournamentResponseModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF40928A202C30043BB59 /* CSGOTournamentResponseModelTests.swift */; };
+		D4CBF40E28A203EA0043BB59 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF40D28A203EA0043BB59 /* JSONUtil.swift */; };
+		D4CBF41128A205340043BB59 /* TournamentResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D4CBF41028A205340043BB59 /* TournamentResponse.json */; };
+		D4CBF41428A206BA0043BB59 /* CSGOSerieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41228A206800043BB59 /* CSGOSerieTests.swift */; };
+		D4CBF41628A208AB0043BB59 /* CSGOLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41528A208AB0043BB59 /* CSGOLeagueTests.swift */; };
+		D4CBF41828A28F2D0043BB59 /* CSGOMatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41728A28F2D0043BB59 /* CSGOMatchTests.swift */; };
+		D4CBF41A28A292C60043BB59 /* CSGOTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41928A292C60043BB59 /* CSGOTeamTests.swift */; };
+		D4CBF41D28A295660043BB59 /* CSGOTeamMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41C28A295660043BB59 /* CSGOTeamMock.swift */; };
+		D4CBF41F28A2958A0043BB59 /* CSGOLeagueMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41E28A2958A0043BB59 /* CSGOLeagueMock.swift */; };
+		D4CBF42128A295B10043BB59 /* CSGOMatchMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42028A295B10043BB59 /* CSGOMatchMock.swift */; };
+		D4CBF42328A295CE0043BB59 /* CSGOSeriesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42228A295CE0043BB59 /* CSGOSeriesMock.swift */; };
+		D4CBF42528A296010043BB59 /* CSGOTournamentResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42428A296010043BB59 /* CSGOTournamentResponseMock.swift */; };
+		D4CBF42828A297A40043BB59 /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42628A297930043BB59 /* NetworkingAPI.swift */; };
+		D4CBF42D28A299C60043BB59 /* NetworkingAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42C28A299C60043BB59 /* NetworkingAPIMock.swift */; };
+		D4CBF42F28A29DE20043BB59 /* CSGOServiceAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42E28A29DE20043BB59 /* CSGOServiceAPITests.swift */; };
+		D4CBF43128A2EAD80043BB59 /* CSGOPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF43028A2EAD80043BB59 /* CSGOPlayerTests.swift */; };
+		D4CBF43428A2EEA20043BB59 /* TeamResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D4CBF43228A2ECF50043BB59 /* TeamResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +62,6 @@
 		D4347AC0289D972C00AE7487 /* CSTVGONetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSTVGONetworking.h; sourceTree = "<group>"; };
 		D4347AC1289D972C00AE7487 /* CSTVGONetworking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CSTVGONetworking.docc; sourceTree = "<group>"; };
 		D4347AC7289D972C00AE7487 /* CSGOTVNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOTVNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4347ACC289D972C00AE7487 /* CSTVGONetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTVGONetworkingTests.swift; sourceTree = "<group>"; };
 		D4347ADA289D97B800AE7487 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		D4347ADC289D97C000AE7487 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
 		D4347ADD289D97C000AE7487 /* HTTPHeaderField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeaderField.swift; sourceTree = "<group>"; };
@@ -55,7 +70,7 @@
 		D4347AE4289D97E300AE7487 /* CSGOTVNetworkingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTVNetworkingAPI.swift; sourceTree = "<group>"; };
 		D4347AEB289D9BE600AE7487 /* CSGOTournamentSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentSession.swift; sourceTree = "<group>"; };
 		D4347AEF289D9C7A00AE7487 /* CSGOMatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOMatchModel.swift; sourceTree = "<group>"; };
-		D4347AF1289DB7C700AE7487 /* CSGOTournamentResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentResponseModel.swift; sourceTree = "<group>"; };
+		D4347AF1289DB7C700AE7487 /* CSGOTournamentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentResponse.swift; sourceTree = "<group>"; };
 		D4347AF3289DBAE400AE7487 /* CSGOTeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamModel.swift; sourceTree = "<group>"; };
 		D4347AF5289DBB0100AE7487 /* CSGOPlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOPlayerModel.swift; sourceTree = "<group>"; };
 		D4347AF7289DBB3A00AE7487 /* CSGOLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOLeague.swift; sourceTree = "<group>"; };
@@ -65,6 +80,23 @@
 		D4347B01289DC0BB00AE7487 /* CSGOTeamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamRequest.swift; sourceTree = "<group>"; };
 		D4347B06289DF95500AE7487 /* CSGOSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOSerie.swift; sourceTree = "<group>"; };
 		D4347B29289F3C0900AE7487 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		D4CBF40928A202C30043BB59 /* CSGOTournamentResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentResponseModelTests.swift; sourceTree = "<group>"; };
+		D4CBF40D28A203EA0043BB59 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
+		D4CBF41028A205340043BB59 /* TournamentResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TournamentResponse.json; sourceTree = "<group>"; };
+		D4CBF41228A206800043BB59 /* CSGOSerieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOSerieTests.swift; sourceTree = "<group>"; };
+		D4CBF41528A208AB0043BB59 /* CSGOLeagueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOLeagueTests.swift; sourceTree = "<group>"; };
+		D4CBF41728A28F2D0043BB59 /* CSGOMatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOMatchTests.swift; sourceTree = "<group>"; };
+		D4CBF41928A292C60043BB59 /* CSGOTeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamTests.swift; sourceTree = "<group>"; };
+		D4CBF41C28A295660043BB59 /* CSGOTeamMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamMock.swift; sourceTree = "<group>"; };
+		D4CBF41E28A2958A0043BB59 /* CSGOLeagueMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOLeagueMock.swift; sourceTree = "<group>"; };
+		D4CBF42028A295B10043BB59 /* CSGOMatchMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOMatchMock.swift; sourceTree = "<group>"; };
+		D4CBF42228A295CE0043BB59 /* CSGOSeriesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOSeriesMock.swift; sourceTree = "<group>"; };
+		D4CBF42428A296010043BB59 /* CSGOTournamentResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentResponseMock.swift; sourceTree = "<group>"; };
+		D4CBF42628A297930043BB59 /* NetworkingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
+		D4CBF42C28A299C60043BB59 /* NetworkingAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAPIMock.swift; sourceTree = "<group>"; };
+		D4CBF42E28A29DE20043BB59 /* CSGOServiceAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOServiceAPITests.swift; sourceTree = "<group>"; };
+		D4CBF43028A2EAD80043BB59 /* CSGOPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOPlayerTests.swift; sourceTree = "<group>"; };
+		D4CBF43228A2ECF50043BB59 /* TeamResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TeamResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +141,7 @@
 			children = (
 				D4347AEA289D9BD500AE7487 /* Sessions */,
 				D4347AD7289D976D00AE7487 /* Supporting Files */,
+				D4347AFD289DBD3C00AE7487 /* CSGOServiceAPI.swift */,
 				D4347AC0289D972C00AE7487 /* CSTVGONetworking.h */,
 				D4347AC1289D972C00AE7487 /* CSTVGONetworking.docc */,
 			);
@@ -118,7 +151,9 @@
 		D4347ACB289D972C00AE7487 /* CSTVGONetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				D4347ACC289D972C00AE7487 /* CSTVGONetworkingTests.swift */,
+				D4CBF42B28A299B70043BB59 /* Networking */,
+				D4CBF40C28A203D90043BB59 /* Supporting Files */,
+				D4CBF40828A202A30043BB59 /* Model */,
 			);
 			path = CSTVGONetworkingTests;
 			sourceTree = "<group>";
@@ -149,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				D4347ADA289D97B800AE7487 /* APIConfiguration.swift */,
+				D4CBF42628A297930043BB59 /* NetworkingAPI.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -156,7 +192,6 @@
 		D4347AEA289D9BD500AE7487 /* Sessions */ = {
 			isa = PBXGroup;
 			children = (
-				D4347AFD289DBD3C00AE7487 /* CSGOServiceAPI.swift */,
 				D4347AF9289DBBC300AE7487 /* Team */,
 				D4347AED289D9C1500AE7487 /* Tournament */,
 			);
@@ -177,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				D4347AEF289D9C7A00AE7487 /* CSGOMatchModel.swift */,
-				D4347AF1289DB7C700AE7487 /* CSGOTournamentResponseModel.swift */,
+				D4347AF1289DB7C700AE7487 /* CSGOTournamentResponse.swift */,
 				D4347AF7289DBB3A00AE7487 /* CSGOLeague.swift */,
 				D4347B06289DF95500AE7487 /* CSGOSerie.swift */,
 			);
@@ -201,6 +236,59 @@
 				D4347AF3289DBAE400AE7487 /* CSGOTeamModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D4CBF40828A202A30043BB59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF41B28A295570043BB59 /* Mock */,
+				D4CBF40928A202C30043BB59 /* CSGOTournamentResponseModelTests.swift */,
+				D4CBF41228A206800043BB59 /* CSGOSerieTests.swift */,
+				D4CBF41528A208AB0043BB59 /* CSGOLeagueTests.swift */,
+				D4CBF41728A28F2D0043BB59 /* CSGOMatchTests.swift */,
+				D4CBF41928A292C60043BB59 /* CSGOTeamTests.swift */,
+				D4CBF43028A2EAD80043BB59 /* CSGOPlayerTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4CBF40C28A203D90043BB59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF40F28A205130043BB59 /* Json Files */,
+				D4CBF40D28A203EA0043BB59 /* JSONUtil.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4CBF40F28A205130043BB59 /* Json Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF41028A205340043BB59 /* TournamentResponse.json */,
+				D4CBF43228A2ECF50043BB59 /* TeamResponse.json */,
+			);
+			path = "Json Files";
+			sourceTree = "<group>";
+		};
+		D4CBF41B28A295570043BB59 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF41C28A295660043BB59 /* CSGOTeamMock.swift */,
+				D4CBF41E28A2958A0043BB59 /* CSGOLeagueMock.swift */,
+				D4CBF42028A295B10043BB59 /* CSGOMatchMock.swift */,
+				D4CBF42228A295CE0043BB59 /* CSGOSeriesMock.swift */,
+				D4CBF42428A296010043BB59 /* CSGOTournamentResponseMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		D4CBF42B28A299B70043BB59 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF42C28A299C60043BB59 /* NetworkingAPIMock.swift */,
+				D4CBF42E28A29DE20043BB59 /* CSGOServiceAPITests.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +383,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CBF41128A205340043BB59 /* TournamentResponse.json in Resources */,
+				D4CBF43428A2EEA20043BB59 /* TeamResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,16 +409,18 @@
 				D4347B02289DC0BB00AE7487 /* CSGOTeamRequest.swift in Sources */,
 				D4347AE0289D97C000AE7487 /* HTTPHeaderField.swift in Sources */,
 				D4347B00289DC05500AE7487 /* CSGOTournamentRequest.swift in Sources */,
+				D4CBF42828A297A40043BB59 /* NetworkingAPI.swift in Sources */,
 				D4347AF0289D9C7A00AE7487 /* CSGOMatchModel.swift in Sources */,
 				D4347AF4289DBAE400AE7487 /* CSGOTeamModel.swift in Sources */,
 				D4347AFC289DBBFB00AE7487 /* CSGOTeamSession.swift in Sources */,
 				D4347AE5289D97E300AE7487 /* CSGOTVNetworkingAPI.swift in Sources */,
-				D4347AF2289DB7C700AE7487 /* CSGOTournamentResponseModel.swift in Sources */,
+				D4347AF2289DB7C700AE7487 /* CSGOTournamentResponse.swift in Sources */,
 				D4347B07289DF95500AE7487 /* CSGOSerie.swift in Sources */,
 				D4347ADB289D97B800AE7487 /* APIConfiguration.swift in Sources */,
 				D4347AF8289DBB3A00AE7487 /* CSGOLeague.swift in Sources */,
 				D4347AF6289DBB0100AE7487 /* CSGOPlayerModel.swift in Sources */,
 				D4347ADF289D97C000AE7487 /* ContentType.swift in Sources */,
+				D4CBF40E28A203EA0043BB59 /* JSONUtil.swift in Sources */,
 				D4347B2A289F3C0900AE7487 /* Date+Extension.swift in Sources */,
 				D4347AFE289DBD3C00AE7487 /* CSGOServiceAPI.swift in Sources */,
 			);
@@ -338,7 +430,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4347ACD289D972C00AE7487 /* CSTVGONetworkingTests.swift in Sources */,
+				D4CBF43128A2EAD80043BB59 /* CSGOPlayerTests.swift in Sources */,
+				D4CBF42F28A29DE20043BB59 /* CSGOServiceAPITests.swift in Sources */,
+				D4CBF41D28A295660043BB59 /* CSGOTeamMock.swift in Sources */,
+				D4CBF42128A295B10043BB59 /* CSGOMatchMock.swift in Sources */,
+				D4CBF42528A296010043BB59 /* CSGOTournamentResponseMock.swift in Sources */,
+				D4CBF41A28A292C60043BB59 /* CSGOTeamTests.swift in Sources */,
+				D4CBF42328A295CE0043BB59 /* CSGOSeriesMock.swift in Sources */,
+				D4CBF41428A206BA0043BB59 /* CSGOSerieTests.swift in Sources */,
+				D4CBF41828A28F2D0043BB59 /* CSGOMatchTests.swift in Sources */,
+				D4CBF41628A208AB0043BB59 /* CSGOLeagueTests.swift in Sources */,
+				D4CBF42D28A299C60043BB59 /* NetworkingAPIMock.swift in Sources */,
+				D4CBF40B28A203250043BB59 /* CSGOTournamentResponseModelTests.swift in Sources */,
+				D4CBF41F28A2958A0043BB59 /* CSGOLeagueMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

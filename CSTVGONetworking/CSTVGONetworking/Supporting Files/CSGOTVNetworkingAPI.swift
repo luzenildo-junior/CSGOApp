@@ -24,10 +24,10 @@ extension APIErrors: LocalizedError {
     }
 }
 
-final class CSGOTVNetworkingAPI {
-    private static var cancellables = Set<AnyCancellable>()
+final class CSGOTVNetworkingAPI: NetworkingAPI {
+    private var cancellables = Set<AnyCancellable>()
     
-    static func fetchData<T: Decodable>(for urlConvertible: URLRequestConvertible, type: T.Type) -> Future<T, Error> {
+    func fetchData<T: Decodable>(for urlConvertible: URLRequestConvertible, type: T.Type) -> Future<T, Error> {
         return Future<T, Error> { promise in
             do {
                 let decoder = JSONDecoder()
@@ -36,7 +36,7 @@ final class CSGOTVNetworkingAPI {
                     .tryMap { (data, response) -> Data in
                         guard let httpResponse = response as? HTTPURLResponse,
                               httpResponse.statusCode == 200 else {
-                            throw URLError(.badServerResponse)
+                            throw APIErrors.NetworkError
                         }
                         return data
                     }

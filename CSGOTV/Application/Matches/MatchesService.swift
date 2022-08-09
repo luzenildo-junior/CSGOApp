@@ -17,7 +17,7 @@ final class MatchesService {
         self.service = service
     }
     
-    func fetchTournaments(for page: Int, completion: @escaping ( Result<[CSGOTournamentResponseModel], Error>) -> ()) {
+    func fetchTournaments(for page: Int, completion: @escaping ( Result<[CSGOTournamentResponse], Error>) -> ()) {
         service.getTournament(page: page)
             .receive(on: DispatchQueue.main)
             .sink { promiseCompletion in

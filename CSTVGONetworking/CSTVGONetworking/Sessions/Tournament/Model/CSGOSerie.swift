@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct CSGOSerie: Decodable {
+public struct CSGOSerie: Decodable, Equatable {
     public let name: String?
 }

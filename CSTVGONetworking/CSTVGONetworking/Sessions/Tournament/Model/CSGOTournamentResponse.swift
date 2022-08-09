@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CSGOTournamentResponseModel: Decodable {
+public struct CSGOTournamentResponse: Decodable {
     public let league: CSGOLeague
     public let matches: [CSGOMatch]
     public let teams: [CSGOTeam]

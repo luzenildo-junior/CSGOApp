@@ -59,7 +59,7 @@ final class MatchesViewModel {
         coordinatorDelegate?.openMatchDetails(match)
     }
     
-    private func handleTournamentsData(data: [CSGOTournamentResponseModel]) {
+    private func handleTournamentsData(data: [CSGOTournamentResponse]) {
         self.matchDisplayableElements.append(contentsOf: self.matchesManager.parseData(tournaments: data))
         self.matchDisplayableElements = matchDisplayableElements
             .sorted(by: { $0.date < $1.date })

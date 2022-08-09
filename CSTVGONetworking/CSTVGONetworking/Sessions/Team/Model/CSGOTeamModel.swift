@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CSGOTeam: Decodable {
+public struct CSGOTeam: Decodable, Equatable {
     public let id: Int64
     public let name: String
     public let imageUrl: String?
