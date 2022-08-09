@@ -12,6 +12,7 @@ struct APIConstants {
     static let accessToken = "mSdYPTZYVLvYX9LwJp_nOrUQ7Hr1xoA3q7d2a-5sVNSfpfvAcZs"
 }
 
+/// Protocol to setup all requests
 protocol APIRequestConfiguration: URLRequestConvertible {
     var path: String { get }
     var method: HTTPMethod { get }
@@ -23,8 +24,9 @@ protocol URLRequestConvertible {
 }
 
 extension APIRequestConfiguration {
-    // MARK: - URLRequestConvertible
+    // MARK: - asURLRequested method
     func asURLRequest() throws -> URLRequest {
+        // URL
         let url = URL(string: APIConstants.baseURL)
         var urlRequest = URLRequest(url: (url?.appendingPathComponent(path))!)
         

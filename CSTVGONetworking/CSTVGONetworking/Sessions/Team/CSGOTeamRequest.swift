@@ -18,6 +18,9 @@ struct CSGOTeamRequest: APIRequestConfiguration {
         .get
     }
     
+    /// Parameters for team request
+    ///     - Parameters:
+    ///         - id: team id to get informations from
     var parameters: RequestParams {
         .queryItems(["filter[id]": id])
     }

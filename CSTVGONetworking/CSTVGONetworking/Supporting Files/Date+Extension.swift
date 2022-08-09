@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// Date extension to work with date parameters in the tournament request
+///     - If you want to see why I have this data manipulation in the networking module, please
+///       read the CSGOTournamentRequest documentation.
 extension Date {
     var twoDaysAgo: Date {
         return Calendar.current.date(byAdding: .day, value: -2, to: noon)!

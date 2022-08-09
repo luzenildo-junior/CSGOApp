@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// MARK: API errors
 enum APIErrors: Error {
     case JSONParseError
     case NetworkError
@@ -24,6 +25,7 @@ extension APIErrors: LocalizedError {
     }
 }
 
+// MARK: CSGOTVNetworkingAPI Implementation
 final class CSGOTVNetworkingAPI: NetworkingAPI {
     private var cancellables = Set<AnyCancellable>()
     

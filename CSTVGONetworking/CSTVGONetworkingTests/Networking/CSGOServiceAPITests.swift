@@ -14,9 +14,9 @@ final class CSGOServiceAPITests: XCTestCase {
     
     func test_getTournament() throws {
         let mockedAPI = NetworkingAPIMock<CSGOTournamentResponse>()
-        mockedAPI.jsonMockedValue = "TournamentResponse".getJsonString()
+        mockedAPI.jsonMockedValue = "TournamentResponse".getJsonStringFromFileName()
         let serviceAPI = CSGOServiceAPI(networkingAPI: mockedAPI)
-        let expectation = expectation(description: "expected to run code")
+        let expectation = expectation(description: "expected to parse the data")
         
         serviceAPI.getTournament(page: 0).sink { promiseCompletion in
             switch promiseCompletion {
@@ -53,9 +53,9 @@ final class CSGOServiceAPITests: XCTestCase {
     
     func test_getTeams() throws {
         let mockedAPI = NetworkingAPIMock<[[CSGOTeam]]>()
-        mockedAPI.jsonMockedValue = "TeamResponse".getJsonString()
+        mockedAPI.jsonMockedValue = "TeamResponse".getJsonStringFromFileName()
         let serviceAPI = CSGOServiceAPI(networkingAPI: mockedAPI)
-        let expectation = expectation(description: "expected to parse the json")
+        let expectation = expectation(description: "expected to parse the data")
         
         serviceAPI.getTeam(with: [123456]).sink{ promiseCompletion in
             switch promiseCompletion {

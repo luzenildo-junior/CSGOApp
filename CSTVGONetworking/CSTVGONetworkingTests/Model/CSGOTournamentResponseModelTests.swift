@@ -11,7 +11,7 @@ import XCTest
 final class CSGOTournamentResponseModelTests: XCTestCase {
     func test_tournamentResponseParse() {
         let expectedResult = CSGOTournamentResponse.mock
-        let parsedData: [CSGOTournamentResponse] = JSONUtil().decodeJSON(jsonFileName: "TournamentResponse")
+        let parsedData: [CSGOTournamentResponse] = "TournamentResponse".decodeJSONFromFileName()
         let sut = parsedData[0]
         
         XCTAssertNotNil(parsedData)
