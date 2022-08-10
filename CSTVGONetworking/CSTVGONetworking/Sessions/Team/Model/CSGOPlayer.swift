@@ -8,8 +8,8 @@
 import Foundation
 
 public struct CSGOPlayer: Decodable, Equatable {
-    public let firstName: String
-    public let lastName: String
+    public let firstName: String?
+    public let lastName: String?
     public let imageUrl: String?
-    public let name: String
+    public let name: String?
 }

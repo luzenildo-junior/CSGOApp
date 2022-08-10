@@ -17,7 +17,7 @@ final class MatchDetailsService {
         self.service = service
     }
     
-    func fetchTeamPlayers(teams: [CSGOTeam], completion: @escaping (Result<[[CSGOPlayer]], Error>) -> ()) {
+    func fetchTeamPlayers(teams: [CSGOTeam], completion: @escaping (Result<[[CSGOTeam]], Error>) -> ()) {
         let teamIds = teams.compactMap { $0.id }
         service.getTeam(with: teamIds)
             .receive(on: DispatchQueue.main)
@@ -29,8 +29,7 @@ final class MatchDetailsService {
                     break
                 }
             } receiveValue: { teams in
-                let playersMap = teams.flatMap { $0 }.compactMap { $0.players }
-                completion(.success(playersMap))
+                completion(.success(teams))
             }.store(in: &cancellables)
     }
 }

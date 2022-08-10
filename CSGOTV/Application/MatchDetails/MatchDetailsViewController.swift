@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import Combine
 
 final class MatchDetailsViewController: BaseViewController {
     private let viewModel: MatchDetailsViewModel
+    private var cancellables = Set<AnyCancellable>()
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.dataSource = self
         tableView.delegate = self
-        // AccessibilityIdentifier for UITesting
+        tableView.separatorStyle = .none
+        tableView.register(type: MatchDetailsPlayerCell.self)
         tableView.accessibilityIdentifier = "tableView"
         return tableView
     }()
@@ -30,6 +34,24 @@ final class MatchDetailsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         enableCodeView()
+        subscribeToPublishers()
+    }
+    
+    private func subscribeToPublishers() {
+        viewModel.$viewState
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] viewState in
+            guard let self = self else { return }
+            switch viewState {
+            case .loading:
+                self.startLoading()
+            case .displayPlayers:
+                self.stopLoading()
+                self.tableView.reloadData()
+            case .showError(let message):
+                print(message)
+            }
+        }.store(in: &cancellables)
     }
 }
 
@@ -55,6 +77,19 @@ extension MatchDetailsViewController: CodeView {
         navigationItem.largeTitleDisplayMode = .never
         tableView.backgroundColor = .clear
         viewModel.fetchTeamPlayers()
+    }
+}
+
+extension MatchDetailsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getNumberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(for: MatchDetailsPlayerCell.self, indexPath: indexPath) else { return UITableViewCell() }
+        let players = viewModel.getPlayers(for: indexPath)
+        cell.setupMatchDetailsPlayerCell(with: players.player1, player2: players.player2)
+        return cell
     }
 }
 

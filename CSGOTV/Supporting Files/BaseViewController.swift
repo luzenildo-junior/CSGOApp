@@ -10,7 +10,9 @@ import UIKit
 
 class BaseViewController: UIViewController {
     private lazy var loadingView: UIView = {
-        UIView(frame: self.view.bounds)
+        let view = UIView(frame: self.view.bounds)
+        view.backgroundColor = AppColors.defaultBackgroundColor
+        return view
     }()
     
     override func viewDidLoad() {

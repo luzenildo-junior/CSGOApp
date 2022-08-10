@@ -11,15 +11,14 @@ import UIKit
 
 final class MatchesViewController: BaseViewController {
     private let viewModel: MatchesViewModel
-    
     private var cancellables = Set<AnyCancellable>()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
         tableView.register(type: MatchTableViewCell.self)
-        // AccessibilityIdentifier for UITesting
         tableView.accessibilityIdentifier = "tableView"
         return tableView
     }()

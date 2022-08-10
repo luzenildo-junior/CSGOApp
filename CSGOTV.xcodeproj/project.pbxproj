@@ -45,6 +45,8 @@
 		D4347B24289EF1C900AE7487 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */; };
 		D4347B26289EFD2200AE7487 /* MatchDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B25289EFD2200AE7487 /* MatchDateView.swift */; };
 		D4347B28289F25E800AE7487 /* MatchLeagueNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */; };
+		D4CBF43928A3274F0043BB59 /* MatchDetailsPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF43828A3274F0043BB59 /* MatchDetailsPlayerCell.swift */; };
+		D4CBF43C28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF43B28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift */; };
 		D4EDDD7428A1B589004A7501 /* CSGOTVNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */; };
 		D4EDDD7528A1B589004A7501 /* CSGOTVNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4EDDD7A28A1D314004A7501 /* MatchesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDD7928A1D314004A7501 /* MatchesCoordinator.swift */; };
@@ -135,6 +137,8 @@
 		D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		D4347B25289EFD2200AE7487 /* MatchDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDateView.swift; sourceTree = "<group>"; };
 		D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchLeagueNameView.swift; sourceTree = "<group>"; };
+		D4CBF43828A3274F0043BB59 /* MatchDetailsPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsPlayerCell.swift; sourceTree = "<group>"; };
+		D4CBF43B28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsPlayerInfoView.swift; sourceTree = "<group>"; };
 		D4EDDD7028A1B57D004A7501 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EDDD7928A1D314004A7501 /* MatchesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCoordinator.swift; sourceTree = "<group>"; };
@@ -358,6 +362,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		D4CBF43A28A32F490043BB59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF43B28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D4EDDD7728A1C94F004A7501 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +392,7 @@
 		D4EDDD7B28A1D95E004A7501 /* MatchDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D4CBF43A28A32F490043BB59 /* View */,
 				D4EDDD8428A1E3DD004A7501 /* TableViewCell */,
 				D4EDDD7C28A1D984004A7501 /* MatchDetailsCoordinator.swift */,
 				D4EDDD7E28A1D9C6004A7501 /* MatchDetailsViewController.swift */,
@@ -394,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				D4EDDD8528A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift */,
+				D4CBF43828A3274F0043BB59 /* MatchDetailsPlayerCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -663,6 +677,7 @@
 				D4347A29289C4B8200AE7487 /* AppDelegate.swift in Sources */,
 				D4347B17289ECE2D00AE7487 /* MatchTeamView.swift in Sources */,
 				D4347A68289C529000AE7487 /* LandingViewController.swift in Sources */,
+				D4CBF43928A3274F0043BB59 /* MatchDetailsPlayerCell.swift in Sources */,
 				D4347B26289EFD2200AE7487 /* MatchDateView.swift in Sources */,
 				D4EDDD8628A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift in Sources */,
 				D4347A63289C50B000AE7487 /* LandingFactory.swift in Sources */,
@@ -680,6 +695,7 @@
 				D4EDDD7D28A1D984004A7501 /* MatchDetailsCoordinator.swift in Sources */,
 				D4347A6A289C63F800AE7487 /* AppColors.swift in Sources */,
 				D4347A5B289C4BF300AE7487 /* CoordinatorProtocol.swift in Sources */,
+				D4CBF43C28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift in Sources */,
 				D4347A75289C7D7E00AE7487 /* MatchesViewController.swift in Sources */,
 				D4347A66289C525A00AE7487 /* LandingViewModel.swift in Sources */,
 				D4347B05289DE49400AE7487 /* MatchesManager.swift in Sources */,
