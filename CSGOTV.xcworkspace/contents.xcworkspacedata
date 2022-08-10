@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/luzenildojunior/Documents/CSGOTV/CSTVGONetworking/CSGOTVNetworking.xcodeproj">
+      location = "group:CSTVGONetworking/CSGOTVNetworking.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:CSGOTV.xcodeproj">
