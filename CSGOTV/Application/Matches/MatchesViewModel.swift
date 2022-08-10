@@ -11,7 +11,7 @@ import CSGOTVNetworking
 
 final class MatchesViewModel {
     @Published var viewState: HomeState = .loading
-    private let service: MatchesService
+    private let service: MatchesServiceProtocol
     private weak var coordinatorDelegate: MatchesCoordinatorDelegate?
     private let matchesManager = MatchesManager()
     private var matchDisplayableElements = [MatchDisplayableContent]()
@@ -20,7 +20,10 @@ final class MatchesViewModel {
     private var isLastPage = false
     private var isLoadingMoreData = false
     
-    init(service: MatchesService, coordinatorDelegate: MatchesCoordinatorDelegate) {
+    init(
+        service: MatchesServiceProtocol,
+        coordinatorDelegate: MatchesCoordinatorDelegate
+    ) {
         self.service = service
         self.coordinatorDelegate = coordinatorDelegate
     }

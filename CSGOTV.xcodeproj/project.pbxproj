@@ -45,6 +45,11 @@
 		D4347B24289EF1C900AE7487 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */; };
 		D4347B26289EFD2200AE7487 /* MatchDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B25289EFD2200AE7487 /* MatchDateView.swift */; };
 		D4347B28289F25E800AE7487 /* MatchLeagueNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */; };
+		D4B6F3F028A406B9003CB715 /* MatchesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F3EF28A406B9003CB715 /* MatchesViewModelTests.swift */; };
+		D4B6F3F628A40B44003CB715 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F3F528A40B44003CB715 /* JSONUtil.swift */; };
+		D4B6F3F828A40B7A003CB715 /* TournamentResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B6F3F728A40B7A003CB715 /* TournamentResponse.json */; };
+		D4B6F3FA28A410CC003CB715 /* MatchesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F3F928A410CC003CB715 /* MatchesServiceTests.swift */; };
+		D4B6F3FC28A4178E003CB715 /* MatchesCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F3FB28A4178E003CB715 /* MatchesCoordinatorTests.swift */; };
 		D4CBF43928A3274F0043BB59 /* MatchDetailsPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF43828A3274F0043BB59 /* MatchDetailsPlayerCell.swift */; };
 		D4CBF43C28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF43B28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift */; };
 		D4EDDD7428A1B589004A7501 /* CSGOTVNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */; };
@@ -137,6 +142,11 @@
 		D4347B22289EF1C900AE7487 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		D4347B25289EFD2200AE7487 /* MatchDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDateView.swift; sourceTree = "<group>"; };
 		D4347B27289F25E800AE7487 /* MatchLeagueNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchLeagueNameView.swift; sourceTree = "<group>"; };
+		D4B6F3EF28A406B9003CB715 /* MatchesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModelTests.swift; sourceTree = "<group>"; };
+		D4B6F3F528A40B44003CB715 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
+		D4B6F3F728A40B7A003CB715 /* TournamentResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TournamentResponse.json; sourceTree = "<group>"; };
+		D4B6F3F928A410CC003CB715 /* MatchesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchesServiceTests.swift; path = CSGOTVTests/Matches/MatchesServiceTests.swift; sourceTree = SOURCE_ROOT; };
+		D4B6F3FB28A4178E003CB715 /* MatchesCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCoordinatorTests.swift; sourceTree = "<group>"; };
 		D4CBF43828A3274F0043BB59 /* MatchDetailsPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsPlayerCell.swift; sourceTree = "<group>"; };
 		D4CBF43B28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsPlayerInfoView.swift; sourceTree = "<group>"; };
 		D4EDDD7028A1B57D004A7501 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +228,8 @@
 		D4347A3E289C4B8400AE7487 /* CSGOTVTests */ = {
 			isa = PBXGroup;
 			children = (
+				D4B6F3F428A40B39003CB715 /* Supporting Files */,
+				D4B6F3EE28A40541003CB715 /* Matches */,
 				D4347A3F289C4B8400AE7487 /* CSGOTVTests.swift */,
 			);
 			path = CSGOTVTests;
@@ -360,6 +372,33 @@
 				D4347B1B289EEEB400AE7487 /* AppFonts.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		D4B6F3EE28A40541003CB715 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6F3F128A40727003CB715 /* Mocks */,
+				D4B6F3EF28A406B9003CB715 /* MatchesViewModelTests.swift */,
+				D4B6F3F928A410CC003CB715 /* MatchesServiceTests.swift */,
+				D4B6F3FB28A4178E003CB715 /* MatchesCoordinatorTests.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		D4B6F3F128A40727003CB715 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D4B6F3F428A40B39003CB715 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6F3F528A40B44003CB715 /* JSONUtil.swift */,
+				D4B6F3F728A40B7A003CB715 /* TournamentResponse.json */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D4CBF43A28A32F490043BB59 /* View */ = {
@@ -547,6 +586,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B6F3F828A40B7A003CB715 /* TournamentResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +750,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B6F3F628A40B44003CB715 /* JSONUtil.swift in Sources */,
+				D4B6F3FC28A4178E003CB715 /* MatchesCoordinatorTests.swift in Sources */,
+				D4B6F3FA28A410CC003CB715 /* MatchesServiceTests.swift in Sources */,
+				D4B6F3F028A406B9003CB715 /* MatchesViewModelTests.swift in Sources */,
 				D4347A40289C4B8400AE7487 /* CSGOTVTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

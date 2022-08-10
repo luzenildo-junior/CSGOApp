@@ -9,6 +9,10 @@ import Foundation
 import CSGOTVNetworking
 import Combine
 
+protocol MatchesServiceProtocol {
+    func fetchTournaments(for page: Int, completion: @escaping ( Result<[CSGOTournamentResponse], Error>) -> ())
+}
+
 final class MatchesService {
     private var cancellables = Set<AnyCancellable>()
     let service: CSGOTournamentSession
@@ -16,7 +20,9 @@ final class MatchesService {
     init(service: CSGOTournamentSession) {
         self.service = service
     }
-    
+}
+
+extension MatchesService: MatchesServiceProtocol {
     func fetchTournaments(for page: Int, completion: @escaping ( Result<[CSGOTournamentResponse], Error>) -> ()) {
         service.getTournament(page: page)
             .receive(on: DispatchQueue.main)
