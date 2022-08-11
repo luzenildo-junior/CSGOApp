@@ -1,0 +1,96 @@
+[
+    {
+        "begin_at": "2022-10-02T13:00:00Z",
+        "end_at": null,
+        "id": 8700,
+        "league": {
+            "id": 4265,
+            "image_url": "http://image.url",
+            "modified_at": "2020-02-07T16:31:08Z",
+            "name": "league-name",
+            "slug": "cs-go-swisscom-hero",
+            "url": null
+        },
+        "league_id": 4265,
+        "live_supported": false,
+        "matches": [
+            {
+                "begin_at": "2022-10-02T13:00:00Z",
+                "detailed_stats": true,
+                "draw": false,
+                "end_at": null,
+                "forfeit": false,
+                "game_advantage": null,
+                "id": 645212,
+                "live": {
+                    "opens_at": null,
+                    "supported": false,
+                    "url": null
+                },
+                "live_embed_url": null,
+                "match_type": "best_of",
+                "modified_at": "2022-08-08T20:00:14Z",
+                "name": "match-name",
+                "number_of_games": 3,
+                "official_stream_url": null,
+                "original_scheduled_at": "2022-10-02T13:00:00Z",
+                "rescheduled": false,
+                "scheduled_at": "2022-10-02T13:00:00Z",
+                "slug": "2022-10-02-e921ad13-13dd-4a94-aae6-ed3b1dafb400",
+                "status": "not_started",
+                "streams": {
+                    "english": {
+                        "embed_url": null,
+                        "raw_url": null
+                    },
+                    "official": {
+                        "embed_url": null,
+                        "raw_url": null
+                    },
+                    "russian": {
+                        "embed_url": null,
+                        "raw_url": null
+                    }
+                },
+                "streams_list": [],
+                "tournament_id": 8700,
+                "winner_id": null
+            }
+        ],
+        "modified_at": "2022-08-08T20:00:21Z",
+        "name": "Playoffs",
+        "prizepool": null,
+        "serie": {
+            "begin_at": "2022-08-09T17:00:00Z",
+            "description": null,
+            "end_at": null,
+            "full_name": "Fall 2022",
+            "id": 4942,
+            "league_id": 4265,
+            "modified_at": "2022-08-08T19:33:33Z",
+            "name": "serie-name",
+            "season": "Fall",
+            "slug": "cs-go-swisscom-hero-fall-2022",
+            "tier": "d",
+            "winner_id": null,
+            "winner_type": null,
+            "year": 2022
+        },
+        "serie_id": 4942,
+        "slug": "cs-go-swisscom-hero-fall-2022-playoffs",
+        "teams": [
+            {
+                "id": 12345678,
+                "name": "team-name"
+            }
+        ],
+        "tier": "d",
+        "videogame": {
+            "id": 3,
+            "name": "CS:GO",
+            "slug": "cs-go"
+        },
+        "winner_id": null,
+        "winner_type": "Team"
+    }
+]

@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4347AC2289D972C00AE7487 /* CSTVGONetworking.docc in Sources */ = {isa = PBXBuildFile; fileRef = D4347AC1289D972C00AE7487 /* CSTVGONetworking.docc */; };
+		D4347AC8289D972C00AE7487 /* CSGOTVNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4347ABD289D972C00AE7487 /* CSGOTVNetworking.framework */; };
+		D4347ACE289D972C00AE7487 /* CSTVGONetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D4347AC0289D972C00AE7487 /* CSTVGONetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4347ADB289D97B800AE7487 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347ADA289D97B800AE7487 /* APIConfiguration.swift */; };
+		D4347ADF289D97C000AE7487 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347ADC289D97C000AE7487 /* ContentType.swift */; };
+		D4347AE0289D97C000AE7487 /* HTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347ADD289D97C000AE7487 /* HTTPHeaderField.swift */; };
+		D4347AE1289D97C000AE7487 /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347ADE289D97C000AE7487 /* RequestParams.swift */; };
+		D4347AE3289D97C800AE7487 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AE2289D97C800AE7487 /* HTTPMethod.swift */; };
+		D4347AE5289D97E300AE7487 /* CSGOTVNetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AE4289D97E300AE7487 /* CSGOTVNetworkingAPI.swift */; };
+		D4347AEC289D9BE600AE7487 /* CSGOTournamentSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AEB289D9BE600AE7487 /* CSGOTournamentSession.swift */; };
+		D4347AF0289D9C7A00AE7487 /* CSGOMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AEF289D9C7A00AE7487 /* CSGOMatch.swift */; };
+		D4347AF2289DB7C700AE7487 /* CSGOTournamentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF1289DB7C700AE7487 /* CSGOTournamentResponse.swift */; };
+		D4347AF4289DBAE400AE7487 /* CSGOTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF3289DBAE400AE7487 /* CSGOTeam.swift */; };
+		D4347AF6289DBB0100AE7487 /* CSGOPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF5289DBB0100AE7487 /* CSGOPlayer.swift */; };
+		D4347AF8289DBB3A00AE7487 /* CSGOLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AF7289DBB3A00AE7487 /* CSGOLeague.swift */; };
+		D4347AFC289DBBFB00AE7487 /* CSGOTeamSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AFB289DBBFB00AE7487 /* CSGOTeamSession.swift */; };
+		D4347AFE289DBD3C00AE7487 /* CSGOServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AFD289DBD3C00AE7487 /* CSGOServiceAPI.swift */; };
+		D4347B00289DC05500AE7487 /* CSGOTournamentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347AFF289DC05500AE7487 /* CSGOTournamentRequest.swift */; };
+		D4347B02289DC0BB00AE7487 /* CSGOTeamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B01289DC0BB00AE7487 /* CSGOTeamRequest.swift */; };
+		D4347B07289DF95500AE7487 /* CSGOSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B06289DF95500AE7487 /* CSGOSerie.swift */; };
+		D4347B2A289F3C0900AE7487 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B29289F3C0900AE7487 /* Date+Extension.swift */; };
+		D4CBF40B28A203250043BB59 /* CSGOTournamentResponseModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF40928A202C30043BB59 /* CSGOTournamentResponseModelTests.swift */; };
+		D4CBF41428A206BA0043BB59 /* CSGOSerieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41228A206800043BB59 /* CSGOSerieTests.swift */; };
+		D4CBF41628A208AB0043BB59 /* CSGOLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41528A208AB0043BB59 /* CSGOLeagueTests.swift */; };
+		D4CBF41828A28F2D0043BB59 /* CSGOMatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41728A28F2D0043BB59 /* CSGOMatchTests.swift */; };
+		D4CBF41A28A292C60043BB59 /* CSGOTeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41928A292C60043BB59 /* CSGOTeamTests.swift */; };
+		D4CBF41D28A295660043BB59 /* CSGOTeamMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41C28A295660043BB59 /* CSGOTeamMock.swift */; };
+		D4CBF41F28A2958A0043BB59 /* CSGOLeagueMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF41E28A2958A0043BB59 /* CSGOLeagueMock.swift */; };
+		D4CBF42128A295B10043BB59 /* CSGOMatchMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42028A295B10043BB59 /* CSGOMatchMock.swift */; };
+		D4CBF42328A295CE0043BB59 /* CSGOSeriesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42228A295CE0043BB59 /* CSGOSeriesMock.swift */; };
+		D4CBF42528A296010043BB59 /* CSGOTournamentResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42428A296010043BB59 /* CSGOTournamentResponseMock.swift */; };
+		D4CBF42828A297A40043BB59 /* NetworkingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42628A297930043BB59 /* NetworkingAPI.swift */; };
+		D4CBF42D28A299C60043BB59 /* NetworkingAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42C28A299C60043BB59 /* NetworkingAPIMock.swift */; };
+		D4CBF42F28A29DE20043BB59 /* CSGOServiceAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF42E28A29DE20043BB59 /* CSGOServiceAPITests.swift */; };
+		D4CBF43128A2EAD80043BB59 /* CSGOPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF43028A2EAD80043BB59 /* CSGOPlayerTests.swift */; };
+		D4CBF43528A316390043BB59 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF40D28A203EA0043BB59 /* JSONUtil.swift */; };
+		D4CBF43628A3163C0043BB59 /* TeamResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D4CBF43228A2ECF50043BB59 /* TeamResponse.json */; };
+		D4CBF43728A3163F0043BB59 /* TournamentResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D4CBF41028A205340043BB59 /* TournamentResponse.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4347AC9289D972C00AE7487 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4347AB4289D972C00AE7487 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4347ABC289D972C00AE7487;
+			remoteInfo = CSTVGONetworking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4347ABD289D972C00AE7487 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4347AC0289D972C00AE7487 /* CSTVGONetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSTVGONetworking.h; sourceTree = "<group>"; };
+		D4347AC1289D972C00AE7487 /* CSTVGONetworking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CSTVGONetworking.docc; sourceTree = "<group>"; };
+		D4347AC7289D972C00AE7487 /* CSGOTVNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOTVNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4347ADA289D97B800AE7487 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		D4347ADC289D97C000AE7487 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		D4347ADD289D97C000AE7487 /* HTTPHeaderField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeaderField.swift; sourceTree = "<group>"; };
+		D4347ADE289D97C000AE7487 /* RequestParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
+		D4347AE2289D97C800AE7487 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D4347AE4289D97E300AE7487 /* CSGOTVNetworkingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTVNetworkingAPI.swift; sourceTree = "<group>"; };
+		D4347AEB289D9BE600AE7487 /* CSGOTournamentSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentSession.swift; sourceTree = "<group>"; };
+		D4347AEF289D9C7A00AE7487 /* CSGOMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOMatch.swift; sourceTree = "<group>"; };
+		D4347AF1289DB7C700AE7487 /* CSGOTournamentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentResponse.swift; sourceTree = "<group>"; };
+		D4347AF3289DBAE400AE7487 /* CSGOTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeam.swift; sourceTree = "<group>"; };
+		D4347AF5289DBB0100AE7487 /* CSGOPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOPlayer.swift; sourceTree = "<group>"; };
+		D4347AF7289DBB3A00AE7487 /* CSGOLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOLeague.swift; sourceTree = "<group>"; };
+		D4347AFB289DBBFB00AE7487 /* CSGOTeamSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamSession.swift; sourceTree = "<group>"; };
+		D4347AFD289DBD3C00AE7487 /* CSGOServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOServiceAPI.swift; sourceTree = "<group>"; };
+		D4347AFF289DC05500AE7487 /* CSGOTournamentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentRequest.swift; sourceTree = "<group>"; };
+		D4347B01289DC0BB00AE7487 /* CSGOTeamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamRequest.swift; sourceTree = "<group>"; };
+		D4347B06289DF95500AE7487 /* CSGOSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOSerie.swift; sourceTree = "<group>"; };
+		D4347B29289F3C0900AE7487 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		D4CBF40928A202C30043BB59 /* CSGOTournamentResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentResponseModelTests.swift; sourceTree = "<group>"; };
+		D4CBF40D28A203EA0043BB59 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
+		D4CBF41028A205340043BB59 /* TournamentResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TournamentResponse.json; sourceTree = "<group>"; };
+		D4CBF41228A206800043BB59 /* CSGOSerieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOSerieTests.swift; sourceTree = "<group>"; };
+		D4CBF41528A208AB0043BB59 /* CSGOLeagueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOLeagueTests.swift; sourceTree = "<group>"; };
+		D4CBF41728A28F2D0043BB59 /* CSGOMatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOMatchTests.swift; sourceTree = "<group>"; };
+		D4CBF41928A292C60043BB59 /* CSGOTeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamTests.swift; sourceTree = "<group>"; };
+		D4CBF41C28A295660043BB59 /* CSGOTeamMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamMock.swift; sourceTree = "<group>"; };
+		D4CBF41E28A2958A0043BB59 /* CSGOLeagueMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOLeagueMock.swift; sourceTree = "<group>"; };
+		D4CBF42028A295B10043BB59 /* CSGOMatchMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOMatchMock.swift; sourceTree = "<group>"; };
+		D4CBF42228A295CE0043BB59 /* CSGOSeriesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOSeriesMock.swift; sourceTree = "<group>"; };
+		D4CBF42428A296010043BB59 /* CSGOTournamentResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTournamentResponseMock.swift; sourceTree = "<group>"; };
+		D4CBF42628A297930043BB59 /* NetworkingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAPI.swift; sourceTree = "<group>"; };
+		D4CBF42C28A299C60043BB59 /* NetworkingAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAPIMock.swift; sourceTree = "<group>"; };
+		D4CBF42E28A29DE20043BB59 /* CSGOServiceAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOServiceAPITests.swift; sourceTree = "<group>"; };
+		D4CBF43028A2EAD80043BB59 /* CSGOPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOPlayerTests.swift; sourceTree = "<group>"; };
+		D4CBF43228A2ECF50043BB59 /* TeamResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TeamResponse.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4347ABA289D972C00AE7487 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4347AC4289D972C00AE7487 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4347AC8289D972C00AE7487 /* CSGOTVNetworking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4347AB3289D972C00AE7487 = {
+			isa = PBXGroup;
+			children = (
+				D4347ABF289D972C00AE7487 /* CSTVGONetworking */,
+				D4347ACB289D972C00AE7487 /* CSTVGONetworkingTests */,
+				D4347ABE289D972C00AE7487 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4347ABE289D972C00AE7487 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4347ABD289D972C00AE7487 /* CSGOTVNetworking.framework */,
+				D4347AC7289D972C00AE7487 /* CSGOTVNetworkingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4347ABF289D972C00AE7487 /* CSTVGONetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D4347AEA289D9BD500AE7487 /* Sessions */,
+				D4347AD7289D976D00AE7487 /* Supporting Files */,
+				D4347AFD289DBD3C00AE7487 /* CSGOServiceAPI.swift */,
+				D4347AC0289D972C00AE7487 /* CSTVGONetworking.h */,
+				D4347AC1289D972C00AE7487 /* CSTVGONetworking.docc */,
+			);
+			path = CSTVGONetworking;
+			sourceTree = "<group>";
+		};
+		D4347ACB289D972C00AE7487 /* CSTVGONetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF42B28A299B70043BB59 /* Networking */,
+				D4CBF40C28A203D90043BB59 /* Supporting Files */,
+				D4CBF40828A202A30043BB59 /* Model */,
+			);
+			path = CSTVGONetworkingTests;
+			sourceTree = "<group>";
+		};
+		D4347AD7289D976D00AE7487 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4347AE2289D97C800AE7487 /* HTTPMethod.swift */,
+				D4347AD9289D978D00AE7487 /* Protocols */,
+				D4347AD8289D978900AE7487 /* Enums */,
+				D4347AE4289D97E300AE7487 /* CSGOTVNetworkingAPI.swift */,
+				D4347B29289F3C0900AE7487 /* Date+Extension.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4347AD8289D978900AE7487 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D4347ADC289D97C000AE7487 /* ContentType.swift */,
+				D4347ADD289D97C000AE7487 /* HTTPHeaderField.swift */,
+				D4347ADE289D97C000AE7487 /* RequestParams.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		D4347AD9289D978D00AE7487 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4347ADA289D97B800AE7487 /* APIConfiguration.swift */,
+				D4CBF42628A297930043BB59 /* NetworkingAPI.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D4347AEA289D9BD500AE7487 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				D4347AF9289DBBC300AE7487 /* Team */,
+				D4347AED289D9C1500AE7487 /* Tournament */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		D4347AED289D9C1500AE7487 /* Tournament */ = {
+			isa = PBXGroup;
+			children = (
+				D4347AEE289D9C1D00AE7487 /* Model */,
+				D4347AEB289D9BE600AE7487 /* CSGOTournamentSession.swift */,
+				D4347AFF289DC05500AE7487 /* CSGOTournamentRequest.swift */,
+			);
+			path = Tournament;
+			sourceTree = "<group>";
+		};
+		D4347AEE289D9C1D00AE7487 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4347AEF289D9C7A00AE7487 /* CSGOMatch.swift */,
+				D4347AF1289DB7C700AE7487 /* CSGOTournamentResponse.swift */,
+				D4347AF7289DBB3A00AE7487 /* CSGOLeague.swift */,
+				D4347B06289DF95500AE7487 /* CSGOSerie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4347AF9289DBBC300AE7487 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				D4347AFA289DBBD000AE7487 /* Model */,
+				D4347AFB289DBBFB00AE7487 /* CSGOTeamSession.swift */,
+				D4347B01289DC0BB00AE7487 /* CSGOTeamRequest.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		D4347AFA289DBBD000AE7487 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4347AF5289DBB0100AE7487 /* CSGOPlayer.swift */,
+				D4347AF3289DBAE400AE7487 /* CSGOTeam.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4CBF40828A202A30043BB59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF41B28A295570043BB59 /* Mock */,
+				D4CBF40928A202C30043BB59 /* CSGOTournamentResponseModelTests.swift */,
+				D4CBF41228A206800043BB59 /* CSGOSerieTests.swift */,
+				D4CBF41528A208AB0043BB59 /* CSGOLeagueTests.swift */,
+				D4CBF41728A28F2D0043BB59 /* CSGOMatchTests.swift */,
+				D4CBF41928A292C60043BB59 /* CSGOTeamTests.swift */,
+				D4CBF43028A2EAD80043BB59 /* CSGOPlayerTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4CBF40C28A203D90043BB59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF40F28A205130043BB59 /* Json Files */,
+				D4CBF40D28A203EA0043BB59 /* JSONUtil.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4CBF40F28A205130043BB59 /* Json Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF41028A205340043BB59 /* TournamentResponse.json */,
+				D4CBF43228A2ECF50043BB59 /* TeamResponse.json */,
+			);
+			path = "Json Files";
+			sourceTree = "<group>";
+		};
+		D4CBF41B28A295570043BB59 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF41C28A295660043BB59 /* CSGOTeamMock.swift */,
+				D4CBF41E28A2958A0043BB59 /* CSGOLeagueMock.swift */,
+				D4CBF42028A295B10043BB59 /* CSGOMatchMock.swift */,
+				D4CBF42228A295CE0043BB59 /* CSGOSeriesMock.swift */,
+				D4CBF42428A296010043BB59 /* CSGOTournamentResponseMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		D4CBF42B28A299B70043BB59 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4CBF42C28A299C60043BB59 /* NetworkingAPIMock.swift */,
+				D4CBF42E28A29DE20043BB59 /* CSGOServiceAPITests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D4347AB8289D972C00AE7487 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4347ACE289D972C00AE7487 /* CSTVGONetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D4347ABC289D972C00AE7487 /* CSGOTVNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4347AD1289D972C00AE7487 /* Build configuration list for PBXNativeTarget "CSGOTVNetworking" */;
+			buildPhases = (
+				D4347AB8289D972C00AE7487 /* Headers */,
+				D4347AB9289D972C00AE7487 /* Sources */,
+				D4347ABA289D972C00AE7487 /* Frameworks */,
+				D4347ABB289D972C00AE7487 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSGOTVNetworking;
+			productName = CSTVGONetworking;
+			productReference = D4347ABD289D972C00AE7487 /* CSGOTVNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4347AC6289D972C00AE7487 /* CSGOTVNetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4347AD4289D972C00AE7487 /* Build configuration list for PBXNativeTarget "CSGOTVNetworkingTests" */;
+			buildPhases = (
+				D4347AC3289D972C00AE7487 /* Sources */,
+				D4347AC4289D972C00AE7487 /* Frameworks */,
+				D4347AC5289D972C00AE7487 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4347ACA289D972C00AE7487 /* PBXTargetDependency */,
+			);
+			name = CSGOTVNetworkingTests;
+			productName = CSTVGONetworkingTests;
+			productReference = D4347AC7289D972C00AE7487 /* CSGOTVNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4347AB4289D972C00AE7487 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D4347ABC289D972C00AE7487 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					D4347AC6289D972C00AE7487 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = D4347AB7289D972C00AE7487 /* Build configuration list for PBXProject "CSGOTVNetworking" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4347AB3289D972C00AE7487;
+			productRefGroup = D4347ABE289D972C00AE7487 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4347ABC289D972C00AE7487 /* CSGOTVNetworking */,
+				D4347AC6289D972C00AE7487 /* CSGOTVNetworkingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4347ABB289D972C00AE7487 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4347AC5289D972C00AE7487 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4CBF43628A3163C0043BB59 /* TeamResponse.json in Resources */,
+				D4CBF43728A3163F0043BB59 /* TournamentResponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4347AB9289D972C00AE7487 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4347AE1289D97C000AE7487 /* RequestParams.swift in Sources */,
+				D4347AEC289D9BE600AE7487 /* CSGOTournamentSession.swift in Sources */,
+				D4347AC2289D972C00AE7487 /* CSTVGONetworking.docc in Sources */,
+				D4347AE3289D97C800AE7487 /* HTTPMethod.swift in Sources */,
+				D4347B02289DC0BB00AE7487 /* CSGOTeamRequest.swift in Sources */,
+				D4347AE0289D97C000AE7487 /* HTTPHeaderField.swift in Sources */,
+				D4347B00289DC05500AE7487 /* CSGOTournamentRequest.swift in Sources */,
+				D4CBF42828A297A40043BB59 /* NetworkingAPI.swift in Sources */,
+				D4347AF0289D9C7A00AE7487 /* CSGOMatch.swift in Sources */,
+				D4347AF4289DBAE400AE7487 /* CSGOTeam.swift in Sources */,
+				D4347AFC289DBBFB00AE7487 /* CSGOTeamSession.swift in Sources */,
+				D4347AE5289D97E300AE7487 /* CSGOTVNetworkingAPI.swift in Sources */,
+				D4347AF2289DB7C700AE7487 /* CSGOTournamentResponse.swift in Sources */,
+				D4347B07289DF95500AE7487 /* CSGOSerie.swift in Sources */,
+				D4347ADB289D97B800AE7487 /* APIConfiguration.swift in Sources */,
+				D4347AF8289DBB3A00AE7487 /* CSGOLeague.swift in Sources */,
+				D4347AF6289DBB0100AE7487 /* CSGOPlayer.swift in Sources */,
+				D4347ADF289D97C000AE7487 /* ContentType.swift in Sources */,
+				D4347B2A289F3C0900AE7487 /* Date+Extension.swift in Sources */,
+				D4347AFE289DBD3C00AE7487 /* CSGOServiceAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4347AC3289D972C00AE7487 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4CBF43128A2EAD80043BB59 /* CSGOPlayerTests.swift in Sources */,
+				D4CBF42F28A29DE20043BB59 /* CSGOServiceAPITests.swift in Sources */,
+				D4CBF41D28A295660043BB59 /* CSGOTeamMock.swift in Sources */,
+				D4CBF42128A295B10043BB59 /* CSGOMatchMock.swift in Sources */,
+				D4CBF42528A296010043BB59 /* CSGOTournamentResponseMock.swift in Sources */,
+				D4CBF41A28A292C60043BB59 /* CSGOTeamTests.swift in Sources */,
+				D4CBF42328A295CE0043BB59 /* CSGOSeriesMock.swift in Sources */,
+				D4CBF41428A206BA0043BB59 /* CSGOSerieTests.swift in Sources */,
+				D4CBF41828A28F2D0043BB59 /* CSGOMatchTests.swift in Sources */,
+				D4CBF41628A208AB0043BB59 /* CSGOLeagueTests.swift in Sources */,
+				D4CBF42D28A299C60043BB59 /* NetworkingAPIMock.swift in Sources */,
+				D4CBF40B28A203250043BB59 /* CSGOTournamentResponseModelTests.swift in Sources */,
+				D4CBF41F28A2958A0043BB59 /* CSGOLeagueMock.swift in Sources */,
+				D4CBF43528A316390043BB59 /* JSONUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4347ACA289D972C00AE7487 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4347ABC289D972C00AE7487 /* CSGOTVNetworking */;
+			targetProxy = D4347AC9289D972C00AE7487 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D4347ACF289D972C00AE7487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4347AD0289D972C00AE7487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D4347AD2289D972C00AE7487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"x86_64-apple-ios-simulator",
+				);
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = luzejunior.CSTVGONetworking;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4347AD3289D972C00AE7487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"x86_64-apple-ios-simulator",
+				);
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = luzejunior.CSTVGONetworking;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D4347AD5289D972C00AE7487 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = luzejunior.CSTVGONetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4347AD6289D972C00AE7487 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = luzejunior.CSTVGONetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4347AB7289D972C00AE7487 /* Build configuration list for PBXProject "CSGOTVNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4347ACF289D972C00AE7487 /* Debug */,
+				D4347AD0289D972C00AE7487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4347AD1289D972C00AE7487 /* Build configuration list for PBXNativeTarget "CSGOTVNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4347AD2289D972C00AE7487 /* Debug */,
+				D4347AD3289D972C00AE7487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4347AD4289D972C00AE7487 /* Build configuration list for PBXNativeTarget "CSGOTVNetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4347AD5289D972C00AE7487 /* Debug */,
+				D4347AD6289D972C00AE7487 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4347AB4289D972C00AE7487 /* Project object */;
+}

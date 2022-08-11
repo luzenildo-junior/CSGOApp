@@ -1,0 +1,60 @@
+[
+    {
+        "acronym": null,
+        "current_videogame": {
+            "id": 3,
+            "name": "CS:GO",
+            "slug": "cs-go"
+        },
+        "id": 125770,
+        "image_url": "https://cdn.pandascore.co/images/team/image/125770/320px_pact.png",
+        "location": "PL",
+        "modified_at": "2022-08-01T09:00:47Z",
+        "name": "PACT",
+        "players": [
+            {
+                "age": 29,
+                "birth_year": 1993,
+                "birthday": "1993-04-14",
+                "first_name": "Dawid",
+                "hometown": "Poland",
+                "id": 20487,
+                "image_url": "https://cdn.pandascore.co/images/player/image/20487/lunatic.png",
+                "last_name": "Cieślak",
+                "name": "lunAtic",
+                "nationality": "PL",
+                "role": null,
+                "slug": "lunatic"
+            },
+            {
+                "age": 20,
+                "birth_year": null,
+                "birthday": null,
+                "first_name": "Martin",
+                "hometown": null,
+                "id": 30016,
+                "image_url": null,
+                "last_name": "Nakonieczny",
+                "name": "maaryy",
+                "nationality": "PL",
+                "role": null,
+                "slug": "maaryy"
+            },
+            {
+                "age": 20,
+                "birth_year": 2002,
+                "birthday": "2002-04-17",
+                "first_name": "Bartosz ",
+                "hometown": null,
+                "id": 30051,
+                "image_url": "https://cdn.pandascore.co/images/player/image/30051/66394813_365379094166923_7854191081989079040_n.png",
+                "last_name": "Niebisz",
+                "name": "bnox",
+                "nationality": "PL",
+                "role": null,
+                "slug": "bnox"
+            }
+        ],
+        "slug": "pact"
+    }
+]

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "fuze-logo.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
