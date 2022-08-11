@@ -12,7 +12,6 @@
 		D4347A35289C4B8400AE7487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4347A33289C4B8400AE7487 /* LaunchScreen.storyboard */; };
 		D4347A40289C4B8400AE7487 /* CSGOTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A3F289C4B8400AE7487 /* CSGOTVTests.swift */; };
 		D4347A4A289C4B8400AE7487 /* CSGOTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A49289C4B8400AE7487 /* CSGOTVUITests.swift */; };
-		D4347A4C289C4B8400AE7487 /* CSGOTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A4B289C4B8400AE7487 /* CSGOTVUITestsLaunchTests.swift */; };
 		D4347A5B289C4BF300AE7487 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A5A289C4BF300AE7487 /* CoordinatorProtocol.swift */; };
 		D4347A5D289C4CAF00AE7487 /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A5C289C4CAF00AE7487 /* CodeViewProtocol.swift */; };
 		D4347A60289C4FF300AE7487 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A5F289C4FF300AE7487 /* MainCoordinator.swift */; };
@@ -112,7 +111,6 @@
 		D4347A3F289C4B8400AE7487 /* CSGOTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTVTests.swift; sourceTree = "<group>"; };
 		D4347A45289C4B8400AE7487 /* CSGOTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4347A49289C4B8400AE7487 /* CSGOTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTVUITests.swift; sourceTree = "<group>"; };
-		D4347A4B289C4B8400AE7487 /* CSGOTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D4347A5A289C4BF300AE7487 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		D4347A5C289C4CAF00AE7487 /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
 		D4347A5F289C4FF300AE7487 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				D4347A49289C4B8400AE7487 /* CSGOTVUITests.swift */,
-				D4347A4B289C4B8400AE7487 /* CSGOTVUITestsLaunchTests.swift */,
 			);
 			path = CSGOTVUITests;
 			sourceTree = "<group>";
@@ -698,7 +695,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4347A4C289C4B8400AE7487 /* CSGOTVUITestsLaunchTests.swift in Sources */,
 				D4347A4A289C4B8400AE7487 /* CSGOTVUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -847,6 +843,7 @@
 		D4347A50289C4B8400AE7487 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -874,6 +871,7 @@
 		D4347A51289C4B8400AE7487 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -940,6 +938,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"x86_64-apple-ios-simulator",
+				);
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -957,6 +959,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"x86_64-apple-ios-simulator",
+				);
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

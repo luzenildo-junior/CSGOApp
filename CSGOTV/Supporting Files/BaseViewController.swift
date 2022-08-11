@@ -52,6 +52,15 @@ class BaseViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }()
     }
+    
+    func showAlert(message: String, retryHandler: (() -> ())? = nil) {
+        let alert = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in
+            retryHandler?()
+        }))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 private extension BaseViewController {

@@ -18,7 +18,7 @@ final class MatchDetailsViewController: BaseViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.register(type: MatchDetailsPlayerCell.self)
-        tableView.accessibilityIdentifier = "tableView"
+        tableView.accessibilityIdentifier = "match-details-tableView"
         return tableView
     }()
     
@@ -49,7 +49,10 @@ final class MatchDetailsViewController: BaseViewController {
                 self.stopLoading()
                 self.tableView.reloadData()
             case .showError(let message):
-                print(message)
+                self.showAlert(message: message) { [weak self] in
+                    guard let self = self else { return }
+                    self.viewModel.fetchTeamPlayers()
+                }
             }
         }.store(in: &cancellables)
     }
@@ -77,6 +80,7 @@ extension MatchDetailsViewController: CodeView {
         navigationItem.largeTitleDisplayMode = .never
         tableView.backgroundColor = .clear
         viewModel.fetchTeamPlayers()
+        view.accessibilityIdentifier = "match-details-view"
     }
 }
 

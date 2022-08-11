@@ -94,5 +94,7 @@ extension MatchTableViewCell: CodeView {
     func configureViews() {
         self.selectionStyle = .none
         self.backgroundColor = .clear
+        self.isAccessibilityElement = true
+        self.accessibilityIdentifier = "match-tableViewCell"
     }
 }

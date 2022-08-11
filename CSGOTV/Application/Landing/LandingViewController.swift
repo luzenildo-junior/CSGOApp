@@ -12,7 +12,7 @@ final class LandingViewController: BaseViewController {
     var viewModel: LandingViewModel
     
     // MARK: View Elements
-    lazy var fuseLogo: UIImageView = {
+    lazy var fuzeLogo: UIImageView = {
         let logo = UIImage(named: "fuze-logo")
         return UIImageView(image: logo)
     }()
@@ -53,7 +53,7 @@ final class LandingViewController: BaseViewController {
         UIView.animate(withDuration: AppConstraints.Animation.Duration.fast,
                        delay: 0.0,
                        options: .curveEaseInOut) {
-            self.fuseLogo.transform = CGAffineTransform(scaleX: self.affineTransformationScale,
+            self.fuzeLogo.transform = CGAffineTransform(scaleX: self.affineTransformationScale,
                                                         y: self.affineTransformationScale)
             self.view.alpha = 0.0
         } completion: { _ in
@@ -65,16 +65,21 @@ final class LandingViewController: BaseViewController {
 // MARK: CodeView setup
 extension LandingViewController: CodeView {
     func addViewHierarchy() {
-        view.addSubview(fuseLogo)
+        view.addSubview(fuzeLogo)
     }
     
     func setupConstraints() {
-        fuseLogo.translatesAutoresizingMaskIntoConstraints = false
+        fuzeLogo.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            fuseLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            fuseLogo.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            fuseLogo.widthAnchor.constraint(equalToConstant: AppConstraints.Image.landingLogoSize),
-            fuseLogo.heightAnchor.constraint(equalToConstant: AppConstraints.Image.landingLogoSize)
+            fuzeLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            fuzeLogo.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            fuzeLogo.widthAnchor.constraint(equalToConstant: AppConstraints.Image.landingLogoSize),
+            fuzeLogo.heightAnchor.constraint(equalToConstant: AppConstraints.Image.landingLogoSize)
         ])
+    }
+    
+    func configureViews() {
+        view.accessibilityIdentifier = "landing-view"
+        fuzeLogo.accessibilityIdentifier = "fuze-logo"
     }
 }

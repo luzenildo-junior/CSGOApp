@@ -18,8 +18,9 @@ final class MatchesViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         tableView.register(type: MatchTableViewCell.self)
-        tableView.accessibilityIdentifier = "tableView"
+        tableView.accessibilityIdentifier = "matches-tableView"
         return tableView
     }()
     
@@ -51,7 +52,10 @@ final class MatchesViewController: BaseViewController {
                 self.stopLoading()
                 self.tableView.reloadData()
             case .showError(let message):
-                print(message)
+                self.showAlert(message: message) { [weak self] in
+                    guard let self = self else { return }
+                    self.viewModel.fetchTournamentData()
+                }
             }
         }.store(in: &cancellables)
     }
@@ -76,7 +80,7 @@ extension MatchesViewController: CodeView {
     func configureViews() {
         title = "home.title".localized
         navigationController?.navigationBar.prefersLargeTitles = true
-        tableView.backgroundColor = .clear
+        view.accessibilityIdentifier = "matches-view"
     }
 }
 
