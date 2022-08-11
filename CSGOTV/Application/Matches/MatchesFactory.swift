@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 final class MatchesFactory {
+    /// Factory make method to build matches view hierarchy
+    ///     - Parameters:
+    ///         - coordinatorDelegate: instance to delegate to the coordinator to push matchDetails view
     static func make(coordinatorDelegate: MatchesCoordinatorDelegate) -> UIViewController {
         let service = MatchesService(service: CSGOServiceAPI())
         let viewModel = MatchesViewModel(service: service, coordinatorDelegate: coordinatorDelegate)

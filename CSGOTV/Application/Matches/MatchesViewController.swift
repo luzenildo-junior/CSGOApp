@@ -13,6 +13,7 @@ final class MatchesViewController: BaseViewController {
     private let viewModel: MatchesViewModel
     private var cancellables = Set<AnyCancellable>()
     
+    // MARK: View elements
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
@@ -24,6 +25,7 @@ final class MatchesViewController: BaseViewController {
         return tableView
     }()
     
+    // MARK: Lifecycle methods
     init(viewModel: MatchesViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -40,6 +42,7 @@ final class MatchesViewController: BaseViewController {
         viewModel.fetchTournamentData()
     }
     
+    // MARK: Private methods
     private func subscribeToPublishers() {
         viewModel.$viewState
         .receive(on: DispatchQueue.main)
@@ -61,6 +64,7 @@ final class MatchesViewController: BaseViewController {
     }
 }
 
+// MARK: CodeView setup
 extension MatchesViewController: CodeView {
     func addViewHierarchy() {
         view.addSubview(tableView)
@@ -84,6 +88,7 @@ extension MatchesViewController: CodeView {
     }
 }
 
+// MARK: UITableViewDataSource setup
 extension MatchesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.getTableViewNumberOfRows()
@@ -96,6 +101,7 @@ extension MatchesViewController: UITableViewDataSource {
     }
 }
 
+// MARK: UITableViewDelegate setup
 extension MatchesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == viewModel.getTableViewNumberOfRows() - 1 {

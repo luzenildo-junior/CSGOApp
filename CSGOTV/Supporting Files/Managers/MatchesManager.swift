@@ -8,15 +8,20 @@
 import Foundation
 import CSGOTVNetworking
 
+// So, here is were the things get real messed up.
+// Please, take a seat, drink a cup of coffee, relax and enjoy this piece of workaround art.
 final class MatchesManager {
     var teamsDict = [String: CSGOTeam]()
     
+    /// matches with theses status will not be displayed in the list
     private let excludedMatchStatus: [CSGOMatchGameStatus] = [.postponed, .finished, .canceled]
     
     init() {
+        // adds a default TBD team to matches that doesn't have teams defined
         teamsDict.updateValue(CSGOTeam(id: 1234567, name: "TBD"), forKey: "TBD")
     }
     
+    /// Parse tournaments data returning an array of MatchDisplayableContent formated to be presented by the view
     func parseData(tournaments: [CSGOTournamentResponse]) -> [MatchDisplayableContent] {
         // get and populate teamsDict with all teams in the response model
         handleTeams(from: tournaments)
@@ -50,10 +55,13 @@ final class MatchesManager {
         }
     }
     
+    /// Populates the teamDict with all the teams in all tournaments data by team name key
     private func handleTeams(from tournaments: [CSGOTournamentResponse]) {
         tournaments.flatMap { $0.teams }.forEach { teamsDict.updateValue($0, forKey: $0.name) }
     }
     
+    /// Get the team names using the match name that has "team1-name vs team2-name" format.
+    /// This method can separate by "match-name: team1-name vs team2-name" format either.
     private func getTeamNames(matchName: String) -> [String] {
         if let separatorMarkerIndex = matchName.firstIndex(of: ":") {
             let distanceFromSeparator = matchName.distance(from: matchName.startIndex, to: separatorMarkerIndex)

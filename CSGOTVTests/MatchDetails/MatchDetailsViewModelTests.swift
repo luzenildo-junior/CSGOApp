@@ -16,7 +16,7 @@ final class MatchDetailsServiceMock: MatchDetailsServiceProtocol {
     
     var didFetchTeamPlayers = false
     
-    func fetchTeamPlayers(teams: [CSGOTeam], completion: @escaping (Result<[[CSGOTeam]], Error>) -> ()) {
+    func fetchTeamsInformations(teams: [CSGOTeam], completion: @escaping (Result<[[CSGOTeam]], Error>) -> ()) {
         self.teams = teams
         didFetchTeamPlayers = true
         

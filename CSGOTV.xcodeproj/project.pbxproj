@@ -25,7 +25,7 @@
 		D4347A75289C7D7E00AE7487 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A74289C7D7E00AE7487 /* MatchesViewController.swift */; };
 		D4347A77289C7D8D00AE7487 /* MatchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A76289C7D8D00AE7487 /* MatchesService.swift */; };
 		D4347A79289D6ECB00AE7487 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4347A78289D6ECB00AE7487 /* Localizable.strings */; };
-		D4347A7C289D6FAF00AE7487 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A7B289D6FAF00AE7487 /* String+Localization.swift */; };
+		D4347A7C289D6FAF00AE7487 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A7B289D6FAF00AE7487 /* String+Extension.swift */; };
 		D4347B05289DE49400AE7487 /* MatchesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B04289DE49400AE7487 /* MatchesManager.swift */; };
 		D4347B0A289E06D600AE7487 /* MatchesContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B09289E06D600AE7487 /* MatchesContentModel.swift */; };
 		D4347B0C289EA44700AE7487 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347B0B289EA44700AE7487 /* Calendar+Extension.swift */; };
@@ -123,7 +123,7 @@
 		D4347A74289C7D7E00AE7487 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		D4347A76289C7D8D00AE7487 /* MatchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesService.swift; sourceTree = "<group>"; };
 		D4347A78289D6ECB00AE7487 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		D4347A7B289D6FAF00AE7487 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		D4347A7B289D6FAF00AE7487 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D4347AAF289D96C300AE7487 /* CSGOTVSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4347AE6289D981500AE7487 /* CSTVGONetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSTVGONetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4347B04289DE49400AE7487 /* MatchesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesManager.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 		D4347A7A289D6F9900AE7487 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D4347A7B289D6FAF00AE7487 /* String+Localization.swift */,
+				D4347A7B289D6FAF00AE7487 /* String+Extension.swift */,
 				D4347B0B289EA44700AE7487 /* Calendar+Extension.swift */,
 				D4347B10289EC5EC00AE7487 /* UITableView+Extension.swift */,
 				D4347B14289ECD7200AE7487 /* NSLayoutConstraint+Extension.swift */,
@@ -649,7 +649,7 @@
 				D4347B0A289E06D600AE7487 /* MatchesContentModel.swift in Sources */,
 				D4EDDD8828A1EA1D004A7501 /* MatchDetailsService.swift in Sources */,
 				D4347A73289C7D7500AE7487 /* MatchesViewModel.swift in Sources */,
-				D4347A7C289D6FAF00AE7487 /* String+Localization.swift in Sources */,
+				D4347A7C289D6FAF00AE7487 /* String+Extension.swift in Sources */,
 				D4347A6C289C675700AE7487 /* BaseViewController.swift in Sources */,
 				D4EDDD7D28A1D984004A7501 /* MatchDetailsCoordinator.swift in Sources */,
 				D4347A6A289C63F800AE7487 /* AppColors.swift in Sources */,

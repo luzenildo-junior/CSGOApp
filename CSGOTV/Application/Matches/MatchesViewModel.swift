@@ -17,6 +17,7 @@ final class MatchesViewModel {
     private var matchDisplayableElements = [MatchDisplayableContent]()
     
     private var page = 1
+    /// Flag to indicate that the last backend call returned empty, so it hits the last page.
     private var isLastPage = false
     private var isLoadingMoreData = false
     
@@ -40,7 +41,9 @@ final class MatchesViewModel {
         }
     }
     
+    /// Method to load more data for pagination
     func loadMoreData() {
+        // Locking the access to fetch tournament using isLoadingMoreData and isLastPage flags
         if !isLoadingMoreData && !isLastPage {
             viewState = .loading
             isLoadingMoreData = true
@@ -62,7 +65,11 @@ final class MatchesViewModel {
         coordinatorDelegate?.openMatchDetails(match)
     }
     
+    /// Handles tournaments data received from the backend
     private func handleTournamentsData(data: [CSGOTournamentResponse]) {
+        // After fetchTournament backend call, I handle the tournament data received in this method.
+        // Basically I'm sending it to a matches manager (see matchesManager class documentation) and sorting it first by date to get the closer dates first
+        // and then sorting it by status to get the running ones first in the list
         self.matchDisplayableElements.append(contentsOf: self.matchesManager.parseData(tournaments: data))
         self.matchDisplayableElements = matchDisplayableElements
             .sorted(by: { $0.date < $1.date })

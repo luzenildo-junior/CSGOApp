@@ -35,9 +35,9 @@ extension CSGOServiceAPI: CSGOTournamentSession {
 // MARK: CSGOTeamSession
 extension CSGOServiceAPI: CSGOTeamSession {
     /// Get team implementation.
-    ///     - This func create an array map of ids given as parameter to an array of Future promises response.
-    ///     - I made this to make n backend calls to get team informations concurrently. Future awaits for all publishers to finish fetching
-    ///     to return the response back to the client
+    ///     - This func creates an array map of ids given as parameter to an array of Future promises response.
+    ///     - Was made to make n backend calls to get team informations concurrently. Future awaits for all publishers to finish fetching
+    ///     and returns the response back to client
     public func getTeam(with ids: [Int64]) -> Future<[[CSGOTeam]], Error> {
         return Future { promise in
             ids.map { self.networkingAPI.fetchData(for: CSGOTeamRequest(id: $0), type: [CSGOTeam].self)

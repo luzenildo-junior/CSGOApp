@@ -22,6 +22,7 @@ final class MatchDetailsPlayerCell: UITableViewCell {
         fatalError("init(codser:) has not been implemented")
     }
     
+    /// If player is nil, hides the player info for the cell
     func setupMatchDetailsPlayerCell(with player1: CSGOPlayer?, player2: CSGOPlayer?) {
         if let player1 = player1 {
             player1Info.isHidden = false

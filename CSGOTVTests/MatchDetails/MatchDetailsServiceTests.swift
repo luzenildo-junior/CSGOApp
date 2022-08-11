@@ -40,7 +40,7 @@ class MatchDetailsServiceTests: XCTestCase {
         sessionMock.promiseFuture = Future { $0(.success([[expectedResult]]))}
         let expectation = expectation(description: "expected to parse the data")
         
-        service.fetchTeamPlayers(teams: [expectedResult]) { result in
+        service.fetchTeamsInformations(teams: [expectedResult]) { result in
             switch result {
             case .success(let responseData):
                 XCTAssertEqual(responseData, [[expectedResult]])
@@ -60,7 +60,7 @@ class MatchDetailsServiceTests: XCTestCase {
         let expectation = expectation(description: "expected to parse the data")
         let expectedResult: CSGOTeam = CSGOTeam(id: 123456, name: "team-name")
         
-        service.fetchTeamPlayers(teams: [expectedResult]) { result in
+        service.fetchTeamsInformations(teams: [expectedResult]) { result in
             switch result {
             case .failure(let error):
                 XCTAssert(error is APINetworkingMockErrors)

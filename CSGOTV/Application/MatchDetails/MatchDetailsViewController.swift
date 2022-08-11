@@ -12,6 +12,7 @@ final class MatchDetailsViewController: BaseViewController {
     private let viewModel: MatchDetailsViewModel
     private var cancellables = Set<AnyCancellable>()
     
+    // MARK: View elements
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.dataSource = self
@@ -22,6 +23,7 @@ final class MatchDetailsViewController: BaseViewController {
         return tableView
     }()
     
+    // MARK: Lifecycle methods
     init(viewModel: MatchDetailsViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -37,6 +39,7 @@ final class MatchDetailsViewController: BaseViewController {
         subscribeToPublishers()
     }
     
+    // MARK: Private methods
     private func subscribeToPublishers() {
         viewModel.$viewState
         .receive(on: DispatchQueue.main)
@@ -58,6 +61,7 @@ final class MatchDetailsViewController: BaseViewController {
     }
 }
 
+// MARK: CodeView setup
 extension MatchDetailsViewController: CodeView {
     func addViewHierarchy() {
         view.addSubview(tableView)
@@ -84,6 +88,7 @@ extension MatchDetailsViewController: CodeView {
     }
 }
 
+// MARK: UITableViewDataSource setup
 extension MatchDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.getNumberOfRows()
@@ -97,6 +102,7 @@ extension MatchDetailsViewController: UITableViewDataSource {
     }
 }
 
+// MARK: UITableViewDelegate setup
 extension MatchDetailsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = MatchDetailsTableViewHeader()
