@@ -60,6 +60,7 @@ final class MatchDetailsPlayerInfoView: UIView {
         playerNickname.text = player.name
         playerName.text = player.firstName
         if let playerImageURL = player.imageUrl {
+            playerImage.kf.indicatorType = .activity
             playerImage.kf.setImage(
                 with: URL(string: playerImageURL)
             )

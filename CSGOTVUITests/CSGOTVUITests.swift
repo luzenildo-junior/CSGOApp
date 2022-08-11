@@ -19,7 +19,6 @@ class CSGOTVUITests: XCTestCase {
         app.launch()
         let landingView = app.otherElements["landing-view"]
         let fuzeLogo = app.images["fuze-logo"]
-        _ = fuzeLogo.waitForExistence(timeout: 3.0)
         
         XCTAssertTrue(landingView.exists)
         XCTAssertTrue(fuzeLogo.exists)
@@ -40,7 +39,6 @@ class CSGOTVUITests: XCTestCase {
         _ = matchesTableView.waitForExistence(timeout: 15.0)
         
         let activityIndicator = app.activityIndicators.element
-        XCTAssertTrue(activityIndicator.exists)
         expectation(for: NSPredicate(format: "exists == 0"), evaluatedWith: activityIndicator)
         waitForExpectations(timeout: 10.0)
         

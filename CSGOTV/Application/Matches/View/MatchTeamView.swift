@@ -18,6 +18,8 @@ final class MatchTeamView: UIView {
         label.textAlignment = .center
         label.font = AppFonts.Label.robotoMedium
         label.numberOfLines = 2
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
         return label
     }()
     

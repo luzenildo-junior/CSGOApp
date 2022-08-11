@@ -78,7 +78,7 @@ extension MatchTableViewCell: CodeView {
             matchOpponents.trailingAnchor.constraint(equalTo: cellBackgroundView.trailingAnchor),
             
             // separator
-            separator.topAnchor.constraint(equalTo: matchOpponents.bottomAnchor, constant: 16.0),
+            separator.topAnchor.constraint(equalTo: matchOpponents.bottomAnchor, constant: 18.0),
             separator.leadingAnchor.constraint(equalTo: cellBackgroundView.leadingAnchor),
             separator.trailingAnchor.constraint(equalTo: cellBackgroundView.trailingAnchor),
             separator.heightAnchor.constraint(equalToConstant: 1.0),
