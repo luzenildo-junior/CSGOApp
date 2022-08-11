@@ -44,6 +44,7 @@ class CSGOTVUITests: XCTestCase {
         
         let cell = matchesTableView.descendants(matching: .cell).element(boundBy: 0)
         _ = cell.waitForExistence(timeout: 5.0)
+        // sometimes this tap fails. Not completelly sure why, but it does...
         cell.tap()
         
         let matchDetailsView = app.otherElements["match-details-view"]

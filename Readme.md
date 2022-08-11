@@ -3,7 +3,7 @@
 ## Description
 Challenge app for [Moises.ai](https://moises.ai/) iOS Developer position
 For this challenge you have to implement an app to display all CS:GO matches in a time period range using PandaScore API as backend api source.
-[Figma design]() for reference
+[Figma design](https://www.figma.com/file/OeNVxV2YkHXMgzky8YNQQO/Desafio-CSTV?node-id=1%3A30) for reference
 
 ## Installation
 ### System Requirements
