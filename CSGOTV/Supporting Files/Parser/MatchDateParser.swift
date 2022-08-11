@@ -17,7 +17,7 @@ extension String {
     }
 }
 
-enum MatchDateParser {
+enum MatchDateParser: Equatable {
     case today(hour: String)
     case thisWeek(day: String, hour: String)
     case future(day: String, hour: String)

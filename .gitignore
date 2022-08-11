@@ -5,6 +5,8 @@
 ## User settings
 xcuserdata/
 CSGOTV.xcworkspace/xcuserdata/*
+CSGOTV.xcodeproj/xcuserdata/*
+CSTVGONetworking/CSGOTVNetworking.xcodeproj/xcuserdata/*
 
 .DS_Store
 CSTVGONetworking/.DS_Store

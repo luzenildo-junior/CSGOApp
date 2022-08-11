@@ -15,6 +15,7 @@ final class MatchDetailsCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
+    /// can't use unavailable because its a requisite for Coordinator protocol (one of the problems of using protocols)
     @available(*, deprecated, message: "Please use start(with)")
     func start() { }
     

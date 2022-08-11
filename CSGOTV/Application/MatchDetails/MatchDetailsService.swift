@@ -9,6 +9,13 @@ import CSGOTVNetworking
 import Combine
 import Foundation
 
+protocol MatchDetailsServiceProtocol {
+    func fetchTeamPlayers(
+        teams: [CSGOTeam],
+        completion: @escaping (Result<[[CSGOTeam]], Error>) -> ()
+    )
+}
+
 final class MatchDetailsService {
     private var cancellables = Set<AnyCancellable>()
     let service: CSGOTeamSession
@@ -16,8 +23,13 @@ final class MatchDetailsService {
     init(service: CSGOTeamSession) {
         self.service = service
     }
-    
-    func fetchTeamPlayers(teams: [CSGOTeam], completion: @escaping (Result<[[CSGOTeam]], Error>) -> ()) {
+}
+
+extension MatchDetailsService: MatchDetailsServiceProtocol {
+    func fetchTeamPlayers(
+        teams: [CSGOTeam],
+        completion: @escaping (Result<[[CSGOTeam]], Error>) -> ()
+    ) {
         let teamIds = teams.compactMap { $0.id }
         service.getTeam(with: teamIds)
             .receive(on: DispatchQueue.main)

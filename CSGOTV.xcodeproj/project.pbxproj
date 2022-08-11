@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DF011BC11A85CFDA412C7C1 /* Pods_CSGOTVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEEE7F451AEA535695C9878 /* Pods_CSGOTVTests.framework */; };
-		ACC48C8F93D90743F7316276 /* Pods_CSGOTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32FFA194A12463628DF7C7E /* Pods_CSGOTV.framework */; };
-		D3CA2D719CBFE776402BCBE2 /* Pods_CSGOTV_CSGOTVUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6D41A16D90BAB575FA7C44 /* Pods_CSGOTV_CSGOTVUITests.framework */; };
 		D4347A29289C4B8200AE7487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A28289C4B8200AE7487 /* AppDelegate.swift */; };
 		D4347A32289C4B8400AE7487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4347A31289C4B8400AE7487 /* Assets.xcassets */; };
 		D4347A35289C4B8400AE7487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4347A33289C4B8400AE7487 /* LaunchScreen.storyboard */; };
@@ -50,6 +47,17 @@
 		D4B6F3F828A40B7A003CB715 /* TournamentResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B6F3F728A40B7A003CB715 /* TournamentResponse.json */; };
 		D4B6F3FA28A410CC003CB715 /* MatchesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F3F928A410CC003CB715 /* MatchesServiceTests.swift */; };
 		D4B6F3FC28A4178E003CB715 /* MatchesCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F3FB28A4178E003CB715 /* MatchesCoordinatorTests.swift */; };
+		D4B6F3FE28A49281003CB715 /* MatchesFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F3FD28A49281003CB715 /* MatchesFactoryTest.swift */; };
+		D4B6F40128A493C4003CB715 /* LandingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F40028A493C4003CB715 /* LandingViewModelTests.swift */; };
+		D4B6F40328A49786003CB715 /* LandingFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F40228A49786003CB715 /* LandingFactoryTests.swift */; };
+		D4B6F40628A49963003CB715 /* MatchDetailsFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F40528A49963003CB715 /* MatchDetailsFactoryTests.swift */; };
+		D4B6F40828A499B3003CB715 /* MatchDetailsCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F40728A499B3003CB715 /* MatchDetailsCoordinatorTests.swift */; };
+		D4B6F40B28A499E4003CB715 /* MatchDisplayableContentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F40A28A499E4003CB715 /* MatchDisplayableContentMock.swift */; };
+		D4B6F40D28A49A33003CB715 /* UINavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F40C28A49A33003CB715 /* UINavigationControllerMock.swift */; };
+		D4B6F40F28A49AEF003CB715 /* MatchDetailsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F40E28A49AEF003CB715 /* MatchDetailsServiceTests.swift */; };
+		D4B6F41128A49D54003CB715 /* MatchDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F41028A49D54003CB715 /* MatchDetailsViewModelTests.swift */; };
+		D4B6F41328A4A02B003CB715 /* CSGOTeamMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F41228A4A02B003CB715 /* CSGOTeamMock.swift */; };
+		D4B6F41528A4A4DD003CB715 /* MatchDateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6F41428A4A4DD003CB715 /* MatchDateParser.swift */; };
 		D4CBF43928A3274F0043BB59 /* MatchDetailsPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF43828A3274F0043BB59 /* MatchDetailsPlayerCell.swift */; };
 		D4CBF43C28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CBF43B28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift */; };
 		D4EDDD7428A1B589004A7501 /* CSGOTVNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EDDD7328A1B589004A7501 /* CSGOTVNetworking.framework */; };
@@ -95,12 +103,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B1109BC185FE39C5F9BF8FB /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV-CSGOTVUITests.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4FEEE7F451AEA535695C9878 /* Pods_CSGOTVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		53B33622E49407AE03959E24 /* Pods-CSGOTVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTVTests.release.xcconfig"; path = "Target Support Files/Pods-CSGOTVTests/Pods-CSGOTVTests.release.xcconfig"; sourceTree = "<group>"; };
-		7291E750C028BF35B154988D /* Pods-CSGOTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTVTests.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTVTests/Pods-CSGOTVTests.debug.xcconfig"; sourceTree = "<group>"; };
-		974C4352A13EC79E7F01C635 /* Pods-CSGOTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.release.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.release.xcconfig"; sourceTree = "<group>"; };
-		CE6D41A16D90BAB575FA7C44 /* Pods_CSGOTV_CSGOTVUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTV_CSGOTVUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4347A25289C4B8200AE7487 /* CSGOTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGOTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4347A28289C4B8200AE7487 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4347A31289C4B8400AE7487 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +149,17 @@
 		D4B6F3F728A40B7A003CB715 /* TournamentResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TournamentResponse.json; sourceTree = "<group>"; };
 		D4B6F3F928A410CC003CB715 /* MatchesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchesServiceTests.swift; path = CSGOTVTests/Matches/MatchesServiceTests.swift; sourceTree = SOURCE_ROOT; };
 		D4B6F3FB28A4178E003CB715 /* MatchesCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCoordinatorTests.swift; sourceTree = "<group>"; };
+		D4B6F3FD28A49281003CB715 /* MatchesFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesFactoryTest.swift; sourceTree = "<group>"; };
+		D4B6F40028A493C4003CB715 /* LandingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModelTests.swift; sourceTree = "<group>"; };
+		D4B6F40228A49786003CB715 /* LandingFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingFactoryTests.swift; sourceTree = "<group>"; };
+		D4B6F40528A49963003CB715 /* MatchDetailsFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsFactoryTests.swift; sourceTree = "<group>"; };
+		D4B6F40728A499B3003CB715 /* MatchDetailsCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsCoordinatorTests.swift; sourceTree = "<group>"; };
+		D4B6F40A28A499E4003CB715 /* MatchDisplayableContentMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDisplayableContentMock.swift; sourceTree = "<group>"; };
+		D4B6F40C28A49A33003CB715 /* UINavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerMock.swift; sourceTree = "<group>"; };
+		D4B6F40E28A49AEF003CB715 /* MatchDetailsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsServiceTests.swift; sourceTree = "<group>"; };
+		D4B6F41028A49D54003CB715 /* MatchDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		D4B6F41228A4A02B003CB715 /* CSGOTeamMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTeamMock.swift; sourceTree = "<group>"; };
+		D4B6F41428A4A4DD003CB715 /* MatchDateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDateParser.swift; sourceTree = "<group>"; };
 		D4CBF43828A3274F0043BB59 /* MatchDetailsPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsPlayerCell.swift; sourceTree = "<group>"; };
 		D4CBF43B28A32F5E0043BB59 /* MatchDetailsPlayerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsPlayerInfoView.swift; sourceTree = "<group>"; };
 		D4EDDD7028A1B57D004A7501 /* CSGOTVNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CSGOTVNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,9 +171,6 @@
 		D4EDDD8228A1D9DD004A7501 /* MatchDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsFactory.swift; sourceTree = "<group>"; };
 		D4EDDD8528A1E3F4004A7501 /* MatchDetailsTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsTableViewHeader.swift; sourceTree = "<group>"; };
 		D4EDDD8728A1EA1D004A7501 /* MatchDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsService.swift; sourceTree = "<group>"; };
-		E8BD6A404B3E06F14C93B8AA /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV-CSGOTVUITests.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F32FFA194A12463628DF7C7E /* Pods_CSGOTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGOTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9E044AD3894AB9D7FD5B489 /* Pods-CSGOTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGOTV.debug.xcconfig"; path = "Target Support Files/Pods-CSGOTV/Pods-CSGOTV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +179,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EDDD7428A1B589004A7501 /* CSGOTVNetworking.framework in Frameworks */,
-				ACC48C8F93D90743F7316276 /* Pods_CSGOTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +186,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF011BC11A85CFDA412C7C1 /* Pods_CSGOTVTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +193,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CA2D719CBFE776402BCBE2 /* Pods_CSGOTV_CSGOTVUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,9 +235,12 @@
 		D4347A3E289C4B8400AE7487 /* CSGOTVTests */ = {
 			isa = PBXGroup;
 			children = (
+				D4B6F40428A49949003CB715 /* MatchDetails */,
+				D4B6F3FF28A493A8003CB715 /* Landing */,
 				D4B6F3F428A40B39003CB715 /* Supporting Files */,
 				D4B6F3EE28A40541003CB715 /* Matches */,
 				D4347A3F289C4B8400AE7487 /* CSGOTVTests.swift */,
+				D4B6F41428A4A4DD003CB715 /* MatchDateParser.swift */,
 			);
 			path = CSGOTVTests;
 			sourceTree = "<group>";
@@ -333,9 +343,6 @@
 				D4EDDD7028A1B57D004A7501 /* CSGOTVNetworking.framework */,
 				D4347AE6289D981500AE7487 /* CSTVGONetworking.framework */,
 				D4347AAF289D96C300AE7487 /* CSGOTVSDK.framework */,
-				F32FFA194A12463628DF7C7E /* Pods_CSGOTV.framework */,
-				CE6D41A16D90BAB575FA7C44 /* Pods_CSGOTV_CSGOTVUITests.framework */,
-				4FEEE7F451AEA535695C9878 /* Pods_CSGOTVTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -381,6 +388,7 @@
 				D4B6F3EF28A406B9003CB715 /* MatchesViewModelTests.swift */,
 				D4B6F3F928A410CC003CB715 /* MatchesServiceTests.swift */,
 				D4B6F3FB28A4178E003CB715 /* MatchesCoordinatorTests.swift */,
+				D4B6F3FD28A49281003CB715 /* MatchesFactoryTest.swift */,
 			);
 			path = Matches;
 			sourceTree = "<group>";
@@ -395,10 +403,41 @@
 		D4B6F3F428A40B39003CB715 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D4B6F40928A499D0003CB715 /* Mocks */,
 				D4B6F3F528A40B44003CB715 /* JSONUtil.swift */,
 				D4B6F3F728A40B7A003CB715 /* TournamentResponse.json */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4B6F3FF28A493A8003CB715 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6F40028A493C4003CB715 /* LandingViewModelTests.swift */,
+				D4B6F40228A49786003CB715 /* LandingFactoryTests.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		D4B6F40428A49949003CB715 /* MatchDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6F40528A49963003CB715 /* MatchDetailsFactoryTests.swift */,
+				D4B6F40728A499B3003CB715 /* MatchDetailsCoordinatorTests.swift */,
+				D4B6F40E28A49AEF003CB715 /* MatchDetailsServiceTests.swift */,
+				D4B6F41028A49D54003CB715 /* MatchDetailsViewModelTests.swift */,
+			);
+			path = MatchDetails;
+			sourceTree = "<group>";
+		};
+		D4B6F40928A499D0003CB715 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D4B6F40A28A499E4003CB715 /* MatchDisplayableContentMock.swift */,
+				D4B6F40C28A49A33003CB715 /* UINavigationControllerMock.swift */,
+				D4B6F41228A4A02B003CB715 /* CSGOTeamMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		D4CBF43A28A32F490043BB59 /* View */ = {
@@ -454,12 +493,6 @@
 		E87D7EC5ECD802EFC5697E20 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F9E044AD3894AB9D7FD5B489 /* Pods-CSGOTV.debug.xcconfig */,
-				974C4352A13EC79E7F01C635 /* Pods-CSGOTV.release.xcconfig */,
-				E8BD6A404B3E06F14C93B8AA /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */,
-				0B1109BC185FE39C5F9BF8FB /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */,
-				7291E750C028BF35B154988D /* Pods-CSGOTVTests.debug.xcconfig */,
-				53B33622E49407AE03959E24 /* Pods-CSGOTVTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -471,12 +504,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4347A4F289C4B8400AE7487 /* Build configuration list for PBXNativeTarget "CSGOTV" */;
 			buildPhases = (
-				ABA7AEBFD2EFF0588C204635 /* [CP] Check Pods Manifest.lock */,
 				D4347A21289C4B8200AE7487 /* Sources */,
 				D4347A22289C4B8200AE7487 /* Frameworks */,
 				D4347A23289C4B8200AE7487 /* Resources */,
 				D4EDDD7628A1B589004A7501 /* Embed Frameworks */,
-				C05D71E95AFCDE021CBCCA8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -491,7 +522,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4347A52289C4B8400AE7487 /* Build configuration list for PBXNativeTarget "CSGOTVTests" */;
 			buildPhases = (
-				55C0D45BB4A1F1AA6EA5EEF2 /* [CP] Check Pods Manifest.lock */,
 				D4347A37289C4B8400AE7487 /* Sources */,
 				D4347A38289C4B8400AE7487 /* Frameworks */,
 				D4347A39289C4B8400AE7487 /* Resources */,
@@ -510,11 +540,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4347A55289C4B8400AE7487 /* Build configuration list for PBXNativeTarget "CSGOTVUITests" */;
 			buildPhases = (
-				5D4746893C11A3C4BBD6C6DF /* [CP] Check Pods Manifest.lock */,
 				D4347A41289C4B8400AE7487 /* Sources */,
 				D4347A42289C4B8400AE7487 /* Frameworks */,
 				D4347A43289C4B8400AE7487 /* Resources */,
-				ED72B9CB299B9511AE08F579 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -599,109 +627,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		55C0D45BB4A1F1AA6EA5EEF2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CSGOTVTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5D4746893C11A3C4BBD6C6DF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CSGOTV-CSGOTVUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ABA7AEBFD2EFF0588C204635 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CSGOTV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C05D71E95AFCDE021CBCCA8B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CSGOTV/Pods-CSGOTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CSGOTV/Pods-CSGOTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSGOTV/Pods-CSGOTV-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ED72B9CB299B9511AE08F579 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CSGOTV-CSGOTVUITests/Pods-CSGOTV-CSGOTVUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		D4347A21289C4B8200AE7487 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -750,11 +675,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B6F41328A4A02B003CB715 /* CSGOTeamMock.swift in Sources */,
+				D4B6F41128A49D54003CB715 /* MatchDetailsViewModelTests.swift in Sources */,
+				D4B6F40B28A499E4003CB715 /* MatchDisplayableContentMock.swift in Sources */,
 				D4B6F3F628A40B44003CB715 /* JSONUtil.swift in Sources */,
+				D4B6F40128A493C4003CB715 /* LandingViewModelTests.swift in Sources */,
 				D4B6F3FC28A4178E003CB715 /* MatchesCoordinatorTests.swift in Sources */,
+				D4B6F3FE28A49281003CB715 /* MatchesFactoryTest.swift in Sources */,
+				D4B6F40328A49786003CB715 /* LandingFactoryTests.swift in Sources */,
+				D4B6F41528A4A4DD003CB715 /* MatchDateParser.swift in Sources */,
 				D4B6F3FA28A410CC003CB715 /* MatchesServiceTests.swift in Sources */,
+				D4B6F40628A49963003CB715 /* MatchDetailsFactoryTests.swift in Sources */,
+				D4B6F40828A499B3003CB715 /* MatchDetailsCoordinatorTests.swift in Sources */,
 				D4B6F3F028A406B9003CB715 /* MatchesViewModelTests.swift in Sources */,
+				D4B6F40D28A49A33003CB715 /* UINavigationControllerMock.swift in Sources */,
 				D4347A40289C4B8400AE7487 /* CSGOTVTests.swift in Sources */,
+				D4B6F40F28A49AEF003CB715 /* MatchDetailsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,7 +846,6 @@
 		};
 		D4347A50289C4B8400AE7487 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9E044AD3894AB9D7FD5B489 /* Pods-CSGOTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -938,7 +873,6 @@
 		};
 		D4347A51289C4B8400AE7487 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 974C4352A13EC79E7F01C635 /* Pods-CSGOTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -966,7 +900,6 @@
 		};
 		D4347A53289C4B8400AE7487 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7291E750C028BF35B154988D /* Pods-CSGOTVTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -986,7 +919,6 @@
 		};
 		D4347A54289C4B8400AE7487 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53B33622E49407AE03959E24 /* Pods-CSGOTVTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1006,7 +938,6 @@
 		};
 		D4347A56289C4B8400AE7487 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8BD6A404B3E06F14C93B8AA /* Pods-CSGOTV-CSGOTVUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1024,7 +955,6 @@
 		};
 		D4347A57289C4B8400AE7487 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B1109BC185FE39C5F9BF8FB /* Pods-CSGOTV-CSGOTVUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

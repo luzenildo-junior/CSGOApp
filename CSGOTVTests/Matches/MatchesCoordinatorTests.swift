@@ -9,28 +9,6 @@ import XCTest
 @testable import CSGOTV
 import CSGOTVNetworking
 
-extension MatchDisplayableContent {
-    static var mock: MatchDisplayableContent {
-        MatchDisplayableContent(matchName: "match-name",
-                                leagueImageUrl: nil,
-                                team1: CSGOTeam(id: 1234567, name: "team-name"),
-                                team2: CSGOTeam(id: 1234567, name: "team-name"),
-                                status: .notStarted,
-                                date: Date())
-    }
-}
-
-final class UINavigationControllerMock: UINavigationController {
-    var pushedViewController: UIViewController?
-    
-    var didTriedToPushViewController = false
-    
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        pushedViewController = viewController
-        didTriedToPushViewController = true
-    }
-}
-
 class MatchesCoordinatorTests: XCTestCase {
     var navigationControllerMock: UINavigationControllerMock!
     var coordinator: MatchesCoordinator!

@@ -12,4 +12,16 @@ public struct CSGOPlayer: Decodable, Equatable {
     public let lastName: String?
     public let imageUrl: String?
     public let name: String?
+    
+    public init(
+        firstName: String?,
+        lastName: String?,
+        imageUrl: String?,
+        name: String?
+    ) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.imageUrl = imageUrl
+        self.name = name
+    }
 }

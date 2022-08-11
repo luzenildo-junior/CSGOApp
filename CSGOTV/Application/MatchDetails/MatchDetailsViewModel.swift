@@ -10,7 +10,7 @@ import CSGOTVNetworking
 
 final class MatchDetailsViewModel {
     @Published var viewState: MatchDetailsState = .loading
-    private let service: MatchDetailsService
+    private let service: MatchDetailsServiceProtocol
     private let match: MatchDisplayableContent
     private var playersDict = [String: [CSGOPlayer]]()
     
@@ -18,16 +18,12 @@ final class MatchDetailsViewModel {
         match.matchName
     }
     
-    init(match: MatchDisplayableContent, service: MatchDetailsService) {
+    init(match: MatchDisplayableContent, service: MatchDetailsServiceProtocol) {
         self.match = match
         self.service = service
     }
     
-    func getMatchDetailsHeaderContent() -> (
-        team1: CSGOTeam,
-        team2: CSGOTeam,
-        date: String
-    ) {
+    func getMatchDetailsHeaderContent() -> (team1: CSGOTeam, team2: CSGOTeam, date: String) {
         (match.team1, match.team2, MatchDateParser(with: match.date).toString())
     }
     
@@ -41,7 +37,7 @@ final class MatchDetailsViewModel {
                 }
                 self.viewState = .displayPlayers
             case .failure(let error):
-                print(error)
+                self.viewState = .showError(message: error.localizedDescription)
             }
         }
     }
