@@ -10,7 +10,6 @@
 		D4347A29289C4B8200AE7487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A28289C4B8200AE7487 /* AppDelegate.swift */; };
 		D4347A32289C4B8400AE7487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4347A31289C4B8400AE7487 /* Assets.xcassets */; };
 		D4347A35289C4B8400AE7487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4347A33289C4B8400AE7487 /* LaunchScreen.storyboard */; };
-		D4347A40289C4B8400AE7487 /* CSGOTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A3F289C4B8400AE7487 /* CSGOTVTests.swift */; };
 		D4347A4A289C4B8400AE7487 /* CSGOTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A49289C4B8400AE7487 /* CSGOTVUITests.swift */; };
 		D4347A5B289C4BF300AE7487 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A5A289C4BF300AE7487 /* CoordinatorProtocol.swift */; };
 		D4347A5D289C4CAF00AE7487 /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4347A5C289C4CAF00AE7487 /* CodeViewProtocol.swift */; };
@@ -108,7 +107,6 @@
 		D4347A34289C4B8400AE7487 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4347A36289C4B8400AE7487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4347A3B289C4B8400AE7487 /* CSGOTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4347A3F289C4B8400AE7487 /* CSGOTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTVTests.swift; sourceTree = "<group>"; };
 		D4347A45289C4B8400AE7487 /* CSGOTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSGOTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4347A49289C4B8400AE7487 /* CSGOTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSGOTVUITests.swift; sourceTree = "<group>"; };
 		D4347A5A289C4BF300AE7487 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 				D4B6F3FF28A493A8003CB715 /* Landing */,
 				D4B6F3F428A40B39003CB715 /* Supporting Files */,
 				D4B6F3EE28A40541003CB715 /* Matches */,
-				D4347A3F289C4B8400AE7487 /* CSGOTVTests.swift */,
 				D4B6F41428A4A4DD003CB715 /* MatchDateParser.swift */,
 			);
 			path = CSGOTVTests;
@@ -686,7 +683,6 @@
 				D4B6F40828A499B3003CB715 /* MatchDetailsCoordinatorTests.swift in Sources */,
 				D4B6F3F028A406B9003CB715 /* MatchesViewModelTests.swift in Sources */,
 				D4B6F40D28A49A33003CB715 /* UINavigationControllerMock.swift in Sources */,
-				D4347A40289C4B8400AE7487 /* CSGOTVTests.swift in Sources */,
 				D4B6F40F28A49AEF003CB715 /* MatchDetailsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
